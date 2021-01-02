@@ -1,0 +1,27 @@
+.Header
+{
+    background-color : #a4a4a4;
+    height: 90px;
+}
+
+.HeaderLogo 
+{
+    font-family: 'Blackadder ITC';
+    float: left;
+    padding: 20px;
+}
+
+li
+{
+    list-style: none;
+    float: left;
+    padding: 20px;
+}
+
+/*.HeaderList {
+    float: left;
+    color: red;
+    font-family: 'Blackadder ITC';
+    font-size: 20px;
+    background-color: aqua;
+}*/
