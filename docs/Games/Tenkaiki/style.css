@@ -1,10 +1,14 @@
 @charset "utf-8";
 
-.unityContainer{
+#unityContainer{
   /*  position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);*/
     text-align: center;
+}
+
+.header-logo {
+    float: left;
 }
