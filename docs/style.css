@@ -1,0 +1,100 @@
+@charset "utf-8";
+header {
+    background-color: #647072;
+    height: 128px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header-logo {
+    float: left;
+}
+
+.header-nav li a {
+    color: #34338d;
+}
+
+.header-nav li a:hover {
+    text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #c0c0c0;
+    color: #1f1f1f;
+    font-size: 15px;
+    line-height: 2;
+}
+
+/*#index {
+    width: 80%;
+}*/
+
+.content {
+    text-align: center;
+    width: max-content;
+    margin: 0 auto;
+}
+
+#index h1 {
+    margin-top: 140px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    width: 100%;
+    border: double 8px #2d8142;
+}
+
+.btn p {
+    font-size: larger;
+}
+
+.gameIcon {
+    width: 128px;
+    height: 128px;
+    float: left;
+    margin-left: 0;
+}
+
+footer {
+    text-align: center;
+    color: #1f1f1f;
+    padding: 20px;
+    font-size: 18px;
+}
+
+/*.header-logo {
+    font-family: 'Blackadder ITC';
+    float: left;
+    padding: 20px;
+}
+
+li {
+    list-style: none;
+    float: left;
+    padding: 20px;
+}*/
+
+/*.HeaderList {
+    float: left;
+    color: red;
+    font-family: 'Blackadder ITC';
+    font-size: 20px;
+    background-color: aqua;
+}*/
