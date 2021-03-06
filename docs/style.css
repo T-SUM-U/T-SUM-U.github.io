@@ -43,9 +43,9 @@ body {
 
 .content {
     text-align: center;
-    width: auto;
+    width: 80%;
     margin: 0 auto;
-    background-color: #2d8142;
+    background-color: #4c64cf;
 }
 
 #index h1 {
@@ -54,7 +54,7 @@ body {
 }
 
 .btn {
-    width: 100%;
+    width: 80%;
     border: double 8px #2d8142;
 }
 
