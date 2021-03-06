@@ -46,6 +46,8 @@ body {
     width: 80%;
     margin: 0 auto;
   /*  background-color: #4c64cf;*/
+  background-image: url(tuo.png);
+  background-repeat: no-repeat;
 }
 
 #index h1 {
