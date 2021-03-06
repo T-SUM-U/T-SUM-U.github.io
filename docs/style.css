@@ -45,12 +45,12 @@ body {
     text-align: center;
     width: 80%;
     margin: 0 auto;
-  /*  background-color: #4c64cf;*/
-  background-image: url(tuo.png);
-  background-repeat: no-repeat;
+    background-color: #4c64cf;
+    background-image: url(tuo.png);
+    background-repeat: no-repeat;
 }
 
-#index h1 {
+.content h1 {
     margin-top: 140px;
     margin-bottom: 50px;
 }
@@ -62,6 +62,11 @@ body {
 
 .btn p {
     font-size: larger;
+}
+
+.btn h2{
+    float: left;
+    margin: auto;
 }
 
 .gameIcon {
