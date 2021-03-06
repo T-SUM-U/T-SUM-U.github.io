@@ -19,12 +19,22 @@
 
 <body>
     <div class="content">
-        <h1>作品を展示しています。</h1>
+        <h1 id="mainTitle">ここでは作品を展示しています。</h1>
+
         <button type="button" onclick="location.href='Games/Tenkaiki/index.html'" class="btn">
-            <img src="Games/Tenkaiki/icon.gif" alt="転回帰" class="gameIcon">
-            <h2>転回帰</h2>
-            <p>壁を回して壁に当たらずに落下し続けるゲームです。</p>
+            <div class="upperButton">
+                <h2 class="gameTitle">転回帰</h2>
+            </div>
+            <div class="underButton">
+                <img src="Games/Tenkaiki/icon.gif" alt="転回帰" class="gameIcon">
+                <div class = "descriptionArea">
+                    <div class="description">壁を回して壁に当たらずに落下し続けるゲームです。</div>
+                </div>
+            </div>
         </button>
+
+        <div class="blank"></div>
+
         <br>
     </div>
 </body>

@@ -12,8 +12,13 @@ img {
     vertical-align: bottom;
 }
 
+button {
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {
@@ -21,7 +26,7 @@ a:hover {
 }
 
 .header-logo {
-    float: left;
+    text-align: center;
 }
 
 .header-nav li a {
@@ -41,35 +46,62 @@ body {
     line-height: 2;
 }
 
-.content {
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    background-color: #4c64cf;
-    background-image: url(tuo.png);
-    background-repeat: no-repeat;
+.blank {
+    height: 12px;
 }
 
-.content h1 {
+.content {
+    margin: 0 auto;
     margin-top: 140px;
+    text-align: center;
+    width: 70%;
+    background-color: #a0a8cc;
+    border: solid 4px #000000;
+}
+
+.content #mainTitle {
     margin-bottom: 50px;
 }
 
 .btn {
-    width: 80%;
+    width: 50%;
+    padding: 0%;
     border: double 8px #2d8142;
+    background-color: #ffffff
 }
 
-.btn p {
-    font-size: larger;
+.btn .upperButton {
+    display: block;
+    border-bottom: ridge 2px #13441f;
 }
 
-.btn h2{
-    float: left;
-    margin: auto;
+.btn .underButton{
+    height: 136px;
 }
 
-.gameIcon {
+.btn .upperButton .gameTitle {
+    text-align: center;
+    margin: 0%;
+}
+
+.btn .underButton .descriptionArea{
+    height: 136px;
+    margin-left: 136px;
+    padding: 0%;
+    display: table;
+    border-left: solid 2px #000000;
+}
+
+.btn .underButton .description {
+    text-align: left;
+    font-size: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 8px;
+}
+
+.btn .underButton .gameIcon {
+    border: solid 4px #ffffff;
     width: 128px;
     height: 128px;
     float: left;
