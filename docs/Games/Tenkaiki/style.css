@@ -68,7 +68,6 @@ main {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  margin-bottom: 24px;
 }
 
 #mainTitle {
@@ -84,6 +83,8 @@ section {
   padding: 0px 12px 12px 12px;
   margin: 0 auto;
   background-color: #ffffff;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 #sidebar-left {
@@ -133,7 +134,6 @@ footer {
   height: 4%;
   text-align: center;
   background-color: #5e5e5e;
-  margin-top: 24px;
   padding: 12px;
   font-size: 18px;
   border-top: solid 2px #000000;
