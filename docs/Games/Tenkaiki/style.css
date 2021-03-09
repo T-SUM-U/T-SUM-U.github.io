@@ -79,8 +79,7 @@ section {
   border: solid 4px #000000;
   box-sizing: border-box;
   padding: 0px 12px 12px 12px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin: 24px 0px;
   background-color: #ffffff;
 }
 
