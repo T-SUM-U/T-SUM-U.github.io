@@ -64,11 +64,6 @@ main {
 }
 
 #unityContainer {
- /* position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;*/
-  position: absolute;
   position: relative;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -84,6 +79,7 @@ section {
   border: solid 4px #000000;
   box-sizing: border-box;
   padding: 0px 12px 12px 12px;
+  margin-top: 24px;
   margin-bottom: 24px;
   background-color: #ffffff;
 }
