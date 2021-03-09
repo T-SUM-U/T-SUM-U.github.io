@@ -51,16 +51,6 @@ body {
     margin-bottom: 16px;
 }
 
-/*#game {
-    padding: 0px 12px 12px 12px;
-    margin-bottom: 12px;
-    background-color: #ffffff;
-}
-
-#art {
-    background-color: #ffffff;
-}*/
-
 main {
     height: 100%;
 }
@@ -85,51 +75,11 @@ section {
     background-color: #ffffff;
 }
 
-.btn {
-    width: 60%;
-    padding: 0%;
-    border: double 8px #2d8142;
-    background-color: #ffffff
-}
-
-.btn .upperButton {
-    display: block;
-    border-bottom: ridge 2px #13441f;
-}
-
-.btn .underButton {
-    height: 136px;
-}
-
-.btn .upperButton .gameTitle {
-    text-align: center;
-    margin: 0%;
-}
-
-.btn .underButton .descriptionArea {
-    height: 136px;
-    margin-left: 136px;
-    padding: 0%;
-    display: table;
-    border-left: solid 2px #000000;
-}
-
-.btn .underButton .description {
-    text-align: left;
+.mainList{
     font-size: 20px;
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 8px;
-    padding-right: 4px;
-}
-
-.btn .underButton .gameIcon {
-    border: solid 4px #ffffff;
-    width: 128px;
-    height: 128px;
-    float: left;
-    margin-left: 0%;
-    padding-left: 0%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #sidebar-left {
@@ -163,7 +113,7 @@ section {
     margin-top: 8px;
 }
 
-.sideList{
+.sideList {
     line-height: 100%;
     font-size: 135%;
 }
