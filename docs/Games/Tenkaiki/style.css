@@ -62,8 +62,8 @@ main {
   height: 100%;
 }
 
-#unityContainer{
-  text-align: center;
+#unityContainer {
+  margin: 0 auto;
 }
 
 #mainTitle {
