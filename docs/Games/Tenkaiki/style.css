@@ -68,6 +68,7 @@ main {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
+  margin-bottom: 24px;
 }
 
 #mainTitle {
@@ -76,10 +77,12 @@ main {
 }
 
 section {
+  width: 70%;
+  text-align: center;
   border: solid 4px #000000;
   box-sizing: border-box;
   padding: 0px 12px 12px 12px;
-  margin: 24px 0px;
+  margin: 0 auto;
   background-color: #ffffff;
 }
 
@@ -119,10 +122,18 @@ section {
   font-size: 135%;
 }
 
+#descriptionArea {
+  padding: 0% 5%;
+  font-size: 20px;
+  text-align: left;
+  line-height: 135%;
+}
+
 footer {
   height: 4%;
   text-align: center;
   background-color: #5e5e5e;
+  margin-top: 24px;
   padding: 12px;
   font-size: 18px;
   border-top: solid 2px #000000;
