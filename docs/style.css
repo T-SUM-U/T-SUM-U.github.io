@@ -72,6 +72,13 @@ main {
     height: 100%;
 }
 
+#unityContainer {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
 #mainTitle {
     margin: 48px;
     text-align: center;
@@ -83,6 +90,13 @@ section {
     padding: 0px 12px 12px 12px;
     margin-bottom: 24px;
     background-color: #ffffff;
+}
+
+.mainList {
+    font-size: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .btn {
@@ -163,9 +177,16 @@ section {
     margin-top: 8px;
 }
 
-.sideList{
+.sideList {
     line-height: 100%;
-    font-size: 135%;
+    font-size: 120%;
+}
+
+#descriptionArea {
+    padding: 0% 5%;
+    font-size: 20px;
+    text-align: left;
+    line-height: 135%;
 }
 
 footer {
