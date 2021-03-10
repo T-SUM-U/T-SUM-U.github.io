@@ -95,6 +95,7 @@ section {
 
 .btn {
     width: 60%;
+    height: auto;
     padding: 0%;
     border: double 8px #2d8142;
     background-color: #ffffff
