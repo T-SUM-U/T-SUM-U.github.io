@@ -95,32 +95,45 @@ section {
 
 .btn {
     width: 60%;
-    height: auto;
     padding: 0%;
     border: double 8px #2d8142;
     background-color: #ffffff
 }
 
 .btn .upperButton {
-    display: block;
-    border-bottom: ridge 2px #13441f;
+    border-bottom: solid 2px #13441f;
 }
 
-.btn .underButton {
-    height: 136px;
+.btn .underButton{
+    display: flex;
+    align-items: center;
+    padding: 0;
 }
 
-.btn .upperButton .gameTitle {
+.btn .upperButton .productTitle {
     text-align: center;
     margin: 0%;
 }
 
+.btn .underButton .productIcon {
+    border: solid 4px #ffffff;
+    width: 20%;
+    height: auto;
+    float: left;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
 .btn .underButton .descriptionArea {
     height: 136px;
-    margin-left: 136px;
     padding: 0%;
     display: table;
     border-left: solid 2px #000000;
+}
+
+.btn .underButton {
+    height: auto;
 }
 
 .btn .underButton .description {
@@ -130,15 +143,6 @@ section {
     vertical-align: middle;
     padding-left: 8px;
     padding-right: 4px;
-}
-
-.btn .underButton .gameIcon {
-    border: solid 4px #ffffff;
-    width: 128px;
-    height: 128px;
-    float: left;
-    margin-left: 0%;
-    padding-left: 0%;
 }
 
 #sidebar-left {
