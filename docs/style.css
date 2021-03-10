@@ -73,13 +73,6 @@ main {
     height: 100%;
 }
 
-#unityContainer {
-    position: relative;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-}
-
 #mainTitle {
     margin: 48px;
     text-align: center;
@@ -91,18 +84,6 @@ section {
     padding: 0px 12px 12px 12px;
     margin-bottom: 24px;
     background-color: #ffffff;
-}
-
-#description {
-    width: 70%;
-    text-align: center;
-    border: solid 4px #000000;
-    box-sizing: border-box;
-    padding: 0px 12px 12px 12px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    margin-top: 24px;
-    margin-bottom: 24px;
 }
 
 .mainList {
@@ -193,13 +174,6 @@ section {
 .sideList {
     line-height: 100%;
     font-size: 120%;
-}
-
-#descriptionArea {
-    padding: 0% 5%;
-    font-size: 20px;
-    text-align: left;
-    line-height: 135%;
 }
 
 footer {
