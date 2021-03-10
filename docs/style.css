@@ -68,6 +68,7 @@ main {
 #content {
     margin: 0 auto;
     text-align: center;
+    position: relative;
     width: 60%;
     height: 100%;
 }
@@ -90,6 +91,18 @@ section {
     padding: 0px 12px 12px 12px;
     margin-bottom: 24px;
     background-color: #ffffff;
+}
+
+#description {
+    width: 70%;
+    text-align: center;
+    border: solid 4px #000000;
+    box-sizing: border-box;
+    padding: 0px 12px 12px 12px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .mainList {
