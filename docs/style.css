@@ -51,16 +51,6 @@ body {
     margin-bottom: 16px;
 }
 
-/*#game {
-    padding: 0px 12px 12px 12px;
-    margin-bottom: 12px;
-    background-color: #ffffff;
-}
-
-#art {
-    background-color: #ffffff;
-}*/
-
 main {
     height: 100%;
 }
@@ -95,13 +85,19 @@ section {
 
 .btn {
     width: 60%;
+    margin: 12px 0px;
     padding: 0%;
     border: double 8px #2d8142;
     background-color: #ffffff
 }
 
+.btn:hover{
+    background-color: #aaaaaa;
+}
+
 .btn .upperButton {
     border-bottom: solid 2px #13441f;
+    background-color: #ffffff;
 }
 
 .btn .underButton{
