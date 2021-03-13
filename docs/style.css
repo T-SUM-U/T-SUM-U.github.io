@@ -101,6 +101,7 @@ section {
 }
 
 .btn .underButton{
+    height: 100%;
     display: flex;
     align-items: center;
     padding: 0;
@@ -113,6 +114,7 @@ section {
 
 .btn .underButton .productIcon {
     border: solid 4px #ffffff;
+    outline: solid 2px #000000;
     width: 20%;
     height: auto;
     float: left;
@@ -122,10 +124,10 @@ section {
 }
 
 .btn .underButton .descriptionArea {
-    height: 136px;
+    height: 100%;
     padding: 0%;
-    display: table;
-    border-left: solid 2px #000000;
+    display: contents;
+    border: solid 2px #000000;
 }
 
 .btn .underButton {
@@ -133,12 +135,11 @@ section {
 }
 
 .btn .underButton .description {
+    width: 100%;
     text-align: left;
     font-size: 20px;
-    display: table-cell;
     vertical-align: middle;
-    padding-left: 8px;
-    padding-right: 4px;
+    margin: 1%;
 }
 
 #sidebar-left {
