@@ -1,0 +1,17 @@
+{
+"companyName": "T_SUM_U",
+"productName": "Tile Stock Simulator",
+"productVersion": "4.1",
+"dataUrl": "TileStockSimulator.data.unityweb",
+"asmCodeUrl": "TileStockSimulator.asm.code.unityweb",
+"asmMemoryUrl": "TileStockSimulator.asm.memory.unityweb",
+"asmFrameworkUrl": "TileStockSimulator.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.1f1"
+}
