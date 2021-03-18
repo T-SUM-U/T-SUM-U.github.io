@@ -1,0 +1,140 @@
+@charset "utf-8";
+html {
+  height: auto;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 136px;
+  text-align: center;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#header-logo {
+  border: outset 4px #9c9c9c;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #9c9c9c;
+  font-size: 15px;
+  line-height: 2;
+  height: 100%;
+}
+
+.sectionTitle {
+  border-bottom: dashed 1px #000000;
+  margin-bottom: 16px;
+}
+
+main {
+  height: 100%;
+}
+
+#content {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  width: 60%;
+  height: 100%;
+}
+
+#unityContainer {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+#mainTitle {
+  margin: 48px;
+  text-align: center;
+}
+
+section {
+  width: 70%;
+  text-align: center;
+  border: solid 4px #000000;
+  box-sizing: border-box;
+  padding: 0px 12px 12px 12px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+#sidebar-left {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  float: left;
+  padding: 0% 1%;
+  width: 16%;
+  height: 100%;
+  text-align: left;
+  background-color: #c9c9c9;
+  border-right: solid 2px #000000;
+}
+
+#sidebar-right {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  float: right;
+  padding: 0% 1%;
+  width: 16%;
+  height: 100%;
+  background-color: #c9c9c9;
+  text-align: left;
+  border-left: solid 2px #000000;
+}
+
+.sideTitle {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.sideList {
+  line-height: 100%;
+  font-size: 135%;
+}
+
+.descriptionArea {
+  padding: 0% 5%;
+  font-size: 20px;
+  text-align: left;
+  line-height: 135%;
+}
+
+footer {
+  height: 4%;
+  text-align: center;
+  background-color: #5e5e5e;
+  padding: 12px;
+  font-size: 18px;
+  border-top: solid 2px #000000;
+}
