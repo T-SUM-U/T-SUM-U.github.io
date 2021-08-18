@@ -156,7 +156,7 @@ section {
 
 .soundBox {
     width: 60%;
-    height:fit-content;
+    height: auto;
     display: inline-block;
     box-sizing: border-box;
     margin: 12px 0px;
@@ -165,7 +165,7 @@ section {
     background-color: #ffffff
 }
 
-audio{
+audio {
     max-width: 100%;
 }
 
