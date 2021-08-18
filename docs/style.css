@@ -96,6 +96,7 @@ section {
 
 .btn {
     width: 60%;
+    height: fit-content;
     margin: 12px 0px;
     padding: 0%;
     border: double 8px #2d8142;
@@ -103,7 +104,7 @@ section {
 }
 
 .btn:hover {
-    background-color: #aaaaaa;
+    background-color: #dadada;
 }
 
 .btn .upperButton {
@@ -154,8 +155,10 @@ section {
 }
 
 .soundBox {
-    display: inline-block;
     width: 60%;
+    height:fit-content;
+    display: inline-block;
+    box-sizing: border-box;
     margin: 12px 0px;
     padding: 0%;
     border: double 8px #2d8142;
