@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title> T_SUM_U | Planet Simulator </title>
     <link rel="shortcut icon" href="../../icon.png">
     <link rel="stylesheet" href="../../style.css">
@@ -49,15 +50,14 @@
 
         <div id="content">
             <section style="text-align: center" id="unityContent">
-                <canvas id="unity-canvas" width=960 height=600
-                    style="width: 80%; height: 50%; background: #231F20"></canvas>
-                <script src="Build/Test.loader.js"></script>
-                <script>
-                    createUnityInstance(document.querySelector("#unity-canvas"), {
+                <canvas id="unity-canvas" width=960 height=600 style="width: 80%; height: 50%; background: #231F20"></canvas>
+                    <script src="Build/Test.loader.js"></script>
+                    <script>
+                      createUnityInstance(document.querySelector("#unity-canvas"), {
                         dataUrl: "Build/Test.data.gz",
                         frameworkUrl: "Build/Test.framework.js.gz",
                         codeUrl: "Build/Test.wasm.gz",
-        streamingAssetsUrl: "StreamingAssets",
+                        streamingAssetsUrl: "StreamingAssets",
                         companyName: "T_SUM_U",
                         productName: "Planet Simulator",
                         productVersion: "1.2",
