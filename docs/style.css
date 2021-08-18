@@ -104,6 +104,7 @@ section {
     padding: 0px 12px 12px 12px;
     /*   margin-bottom: 24px;*/
     background-color: #ffffff;
+    font-size: 100%;
 }
 
 .mainList {
@@ -159,6 +160,7 @@ section {
     padding: 0%;
     display: contents;
     border: solid 2px #000000;
+    font-size: 100%;
 }
 
 .btn .underButton {
@@ -244,8 +246,18 @@ audio {
     margin-top: 24px;
 }
 
+.description {
+    width: 40%;
+    text-align: left;
+    line-height: 135%;
+    display: inline-block;
+    font-family: "customFont";
+}
+
 footer {
     height: 4%;
+    border-top: solid 1px #bebebe;
+    margin-top: -1px;
     text-align: center;
     background-color: #000000;
     padding: 12px;
