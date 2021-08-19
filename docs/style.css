@@ -254,6 +254,11 @@ audio {
     font-family: "customFont";
 }
 
+#content #unityContent #processing-pattern{
+    width: 50%;
+    height: 50%;
+}
+
 footer {
     height: 4%;
     border-top: solid 1px #bebebe;
