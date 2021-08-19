@@ -99,6 +99,7 @@ main {
 }
 
 section {
+    width: 100%;
     border-bottom: solid 1px #bebebe;
     box-sizing: border-box;
     padding: 0px 12px 12px 12px;
@@ -127,7 +128,7 @@ section {
     background-color: #ebebeb;
 }
 
-.btn .upperButton {
+.upperButton {
     border-bottom: solid 1px #000000;
     background-color: #ffffff;
 }
@@ -139,7 +140,7 @@ section {
     padding: 0;
 }
 
-.btn .upperButton .productTitle {
+.upperButton .productTitle {
     text-align: center;
     margin: 0%;
 }
@@ -193,14 +194,41 @@ audio {
 .picBox {
     width: 180px;
     height: 180px;
-    border: double 4px #000000;
-    margin: 2px;
     display: inline-block;
+}
+
+.picBtn {
+    margin: 6px;
+    padding: 0%;
+    background-color: #ffffff;
+    border: double 4px #000000;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.picBtn:hover{
+    background-color: #ebebeb;
+}
+
+#picSection{
+    height: auto;
+    max-height: 100vh;
+    display: inline-block;
+    position: relative;
 }
 
 .innerPic {
     max-width: 100%;
     max-height: 100%;
+    margin: auto;
+}
+
+.pagePic{
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
 }
 
 #sidebar-left {
@@ -236,12 +264,7 @@ audio {
     margin-top: 12%;
     height: 60px;
 }
-/*
-#contact {
-    border-top: solid 1px #bebebe;
-    margin-top: 20%;
-}
-*/
+
 #unity-canvas {
     margin-top: 24px;
 }
@@ -254,7 +277,7 @@ audio {
     font-family: "customFont";
 }
 
-#content #unityContent #processing-pattern{
+#content #unityContent #processing-pattern {
     width: 50%;
     height: 50%;
 }

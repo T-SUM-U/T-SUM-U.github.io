@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title> T_SUM_U | 作品展示場 </title>
+    <title> T_SUM_U | トップページ </title>
     <link rel="shortcut icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
     <meta anme="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
     </header>
 
 
-    <h1 id="mainTitle">作品展示場</h1>
+    <h1 id="mainTitle">トップページ</h1>
 
     <main>
         <div id="sidebar-left">
@@ -39,13 +39,13 @@
 
         <div id="sidebar-right">
             <aside>
-                <h3 class="sideTitle">外部リンク/問い合わせ</h3>
+                <h3 class="sideTitle">外部リンク</h3>
                 <a href="https://twitter.com/T_SUM_U" target="_blank" rel="noopener noreferrer">
                     <img src="Twitter_Social_Icon_Rounded_Square_Color.png" alt="Twitter" class="sideBtn">
                 </a>
 
                 <br>
-          <!--      <h3 class="sideTitle" id="contact">問い合わせ</h3>  -->
+                <!--      <h3 class="sideTitle" id="contact">問い合わせ</h3>  -->
                 <a href="mailto:tzsumhu@gmail.com">
                     <img src="mail.png" alt="Mail" class="sideBtn">
                 </a>
@@ -53,53 +53,44 @@
         </div>
 
         <div id="content">
+            <section id="news">
+                <h2 class="sectionTitle">最新情報</h2>
+                <div class="description">
+                    <li>2021/8/19</li>
+                    <ul>
+                        <li>新しいものが上に表示されるように変更</li>
+                        <li>ページ最上部に最新情報を記載</li>
+                        <li>ホームページ名を「作品展示場」から「トップページ」に変更</li>
+                        <li>各イラストのページを追加</li>
+                        <li>その他多少の変更</li>
+                    </ul>
+                </div>
+            </section>
+
             <section id="game">
                 <h2 class="sectionTitle">ゲーム</h2>
 
-                <button type="button" onclick="location.href='Games/KusaFactory/index.html'" class="btn">
+                <button type="button" onclick="location.href='Games/N10/index.html'" class="btn">
                     <div class="upperButton">
-                        <h2 class="productTitle" id="KusaFactory">草工場</h2>
+                        <h2 class="productTitle" id="N10">N10</h2>
                     </div>
                     <div class="underButton">
-                        <img src="Games/KusaFactory/icon.gif" alt="草工場" class="productIcon">
+                        <img src="Games/N10/icon.gif" alt="N10" class="productIcon">
                         <div class="descriptionArea">
-                            <p class="description">草を生やすゲームです。</p>
+                            <p class="description">クリックするゲームです。</p>
                         </div>
                     </div>
                 </button>
 
-                <button type="button" onclick="location.href='Games/TileStockSimulator/index.html'" class="btn">
-                    <div class="upperButton">
-                        <h2 class="productTitle" id="TileStockSimulator">Tile Stock Simulator</h2>
-                    </div>
-                    <div class="underButton">
-                        <img src="Games/TileStockSimulator/icon.png" alt="草工場" class="productIcon">
-                        <div class="descriptionArea">
-                            <p class="description">簡易的な株取引のシミュレーターです。</p>
-                        </div>
-                    </div>
-                </button>
 
-                <button type="button" onclick="location.href='Games/PlanetSimulator/index.html'" class="btn">
+                <button type="button" onclick="location.href='Games/Pancoroll/index.html'" class="btn">
                     <div class="upperButton">
-                        <h2 class="productTitle" id="PlanetSimulator">Planet Simulator</h2>
+                        <h2 class="productTitle" id="Pancoroll">パンコロール</h2>
                     </div>
                     <div class="underButton">
-                        <img src="Games/PlanetSimulator/icon.png" alt="Planet Simulator" class="productIcon">
+                        <img src="Games/Pancoroll/icon.gif" alt="パンコロール" class="productIcon">
                         <div class="descriptionArea">
-                            <p class="description">惑星を生成して星系を作るゲームです。</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" onclick="location.href='Games/GravitalRoom/index.html'" class="btn">
-                    <div class="upperButton">
-                        <h2 class="productTitle" id="GravitalRoom">中心空間</h2>
-                    </div>
-                    <div class="underButton">
-                        <img src="Games/GravitalRoom/icon.gif" alt="中心空間" class="productIcon">
-                        <div class="descriptionArea">
-                            <p class="description">球をぶつけて球を弾くゲームです。</p>
+                            <p class="description">パンジャンドラムを直進させるゲームです。</p>
                         </div>
                     </div>
                 </button>
@@ -116,26 +107,50 @@
                     </div>
                 </button>
 
-                <button type="button" onclick="location.href='Games/Pancoroll/index.html'" class="btn">
+                <button type="button" onclick="location.href='Games/GravitalRoom/index.html'" class="btn">
                     <div class="upperButton">
-                        <h2 class="productTitle" id="Pancoroll">パンコロール</h2>
+                        <h2 class="productTitle" id="GravitalRoom">中心空間</h2>
                     </div>
                     <div class="underButton">
-                        <img src="Games/Pancoroll/icon.gif" alt="パンコロール" class="productIcon">
+                        <img src="Games/GravitalRoom/icon.gif" alt="中心空間" class="productIcon">
                         <div class="descriptionArea">
-                            <p class="description">パンジャンドラムを直進させるゲームです。</p>
+                            <p class="description">球をぶつけて球を弾くゲームです。</p>
                         </div>
                     </div>
                 </button>
 
-                <button type="button" onclick="location.href='Games/N10/index.html'" class="btn">
+                <button type="button" onclick="location.href='Games/PlanetSimulator/index.html'" class="btn">
                     <div class="upperButton">
-                        <h2 class="productTitle" id="N10">N10</h2>
+                        <h2 class="productTitle" id="PlanetSimulator">Planet Simulator</h2>
                     </div>
                     <div class="underButton">
-                        <img src="Games/N10/icon.gif" alt="N10" class="productIcon">
+                        <img src="Games/PlanetSimulator/icon.png" alt="Planet Simulator" class="productIcon">
                         <div class="descriptionArea">
-                            <p class="description">クリックするゲームです。</p>
+                            <p class="description">惑星を生成して星系を作るゲームです。</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" onclick="location.href='Games/TileStockSimulator/index.html'" class="btn">
+                    <div class="upperButton">
+                        <h2 class="productTitle" id="TileStockSimulator">Tile Stock Simulator</h2>
+                    </div>
+                    <div class="underButton">
+                        <img src="Games/TileStockSimulator/icon.png" alt="草工場" class="productIcon">
+                        <div class="descriptionArea">
+                            <p class="description">簡易的な株取引のシミュレーターです。</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" onclick="location.href='Games/KusaFactory/index.html'" class="btn">
+                    <div class="upperButton">
+                        <h2 class="productTitle" id="KusaFactory">草工場</h2>
+                    </div>
+                    <div class="underButton">
+                        <img src="Games/KusaFactory/icon.gif" alt="草工場" class="productIcon">
+                        <div class="descriptionArea">
+                            <p class="description">草を生やすゲームです。</p>
                         </div>
                     </div>
                 </button>
@@ -148,17 +163,10 @@
                 <p>転載する際はURLを併記してください。</p>
 
                 <div class="soundBox">
-                    <h2 class="productTitle" id="hit">衝突1</h2>
-                    <audio controls src="Sounds/hit.wav"> </audio>
+                    <h2 class="productTitle" id="explode">爆発</h2>
+                    <audio controls src="Sounds/explode.wav"> </audio>
                     <br>
-                    <a href="Sounds/hit.wav" download>ダウンロード</a>
-                </div>
-
-                <div class="soundBox">
-                    <h2 class="productTitle" id="hit2">衝突2</h2>
-                    <audio controls src="Sounds/hit2.wav"> </audio>
-                    <br>
-                    <a href="Sounds/hit2.wav" download>ダウンロード</a>
+                    <a href="Sounds/explode.wav" download>ダウンロード</a>
                 </div>
 
                 <div class="soundBox">
@@ -169,10 +177,17 @@
                 </div>
 
                 <div class="soundBox">
-                    <h2 class="productTitle" id="explode">爆発</h2>
-                    <audio controls src="Sounds/explode.wav"> </audio>
+                    <h2 class="productTitle" id="hit2">衝突2</h2>
+                    <audio controls src="Sounds/hit2.wav"> </audio>
                     <br>
-                    <a href="Sounds/explode.wav" download>ダウンロード</a>
+                    <a href="Sounds/hit2.wav" download>ダウンロード</a>
+                </div>
+
+                <div class="soundBox">
+                    <h2 class="productTitle" id="hit">衝突1</h2>
+                    <audio controls src="Sounds/hit.wav"> </audio>
+                    <br>
+                    <a href="Sounds/hit.wav" download>ダウンロード</a>
                 </div>
 
             </section>
@@ -180,23 +195,22 @@
             <section id="pic">
                 <h2 class="sectionTitle">イラスト</h2>
                 <p>転載する際はURLを併記してください。</p>
+                <p>利用規約は各作品ページでご確認ください。</p>
 
-                <div class="picBox">
-                    <img src="Pictures/0.PNG" alt="" class="innerPic">
-                </div>
-
-                <div class="picBox">
-                    <img src="Pictures/1.PNG" alt="" class="innerPic">
-                </div>
-
-                <div class="picBox">
-                    <img src="Pictures/2.PNG" alt="" class="innerPic">
-                </div>
+                <button onclick="location.href='Pictures/Nurie/index.html'" class="picBtn">
+                    <div class="upperButton">
+                        <h2 class="productTitle">塗り絵</h2>
+                    </div>
+                    <div class="picBox">
+                        <img src="Pictures/Nurie/Nurie.PNG" alt="" class="innerPic">
+                    </div>
+                </button>
 
             </section>
 
             <section id="model">
                 <h2 class="sectionTitle">3Dモデル</h2>
+                <p>ここにはまだ作品がありません。</p>
             </section>
 
 
@@ -204,26 +218,14 @@
             <section id="other">
                 <h2 class="sectionTitle">その他</h2>
 
-                <button type="button" onclick="location.href='Others/P/index.html'" class="btn">
+                <button type="button" onclick="location.href='Others/ColorLines/index.html'" class="btn">
                     <div class="upperButton">
-                        <h2 class="productTitle" id="P">P</h2>
+                        <h2 class="productTitle" id="ColorLines">よくあるやつ</h2>
                     </div>
                     <div class="underButton">
-                        <img src="Others/P/icon.gif" alt="P" class="productIcon">
+                        <img src="Others/ColorLines/icon.gif" alt="よくあるやつ" class="productIcon">
                         <div class="descriptionArea">
-                            <p class="description">ランダムに色を変えながら動く点です。</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" onclick="location.href='Others/TimeNow/index.html'" class="btn">
-                    <div class="upperButton">
-                        <h2 class="productTitle" id="TimeNow">情報量が多い時計</h2>
-                    </div>
-                    <div class="underButton">
-                        <img src="Others/TimeNow/proicon.png" alt="情報量が多い時計" class="productIcon">
-                        <div class="descriptionArea">
-                            <p class="description">情報量が多い時計です。</p>
+                            <p class="description">よくあるそれっぽいやつです。</p>
                         </div>
                     </div>
                 </button>
@@ -240,28 +242,52 @@
                     </div>
                 </button>
 
-                <button type="button" onclick="location.href='Others/ColorLines/index.html'" class="btn">
+                <button type="button" onclick="location.href='Others/TimeNow/index.html'" class="btn">
                     <div class="upperButton">
-                        <h2 class="productTitle" id="ColorLines">よくあるやつ</h2>
+                        <h2 class="productTitle" id="TimeNow">情報量が多い時計</h2>
                     </div>
                     <div class="underButton">
-                        <img src="Others/ColorLines/icon.gif" alt="よくあるやつ" class="productIcon">
+                        <img src="Others/TimeNow/proicon.png" alt="情報量が多い時計" class="productIcon">
                         <div class="descriptionArea">
-                            <p class="description">よくあるそれっぽいやつです。</p>
+                            <p class="description">情報量が多い時計です。</p>
                         </div>
                     </div>
                 </button>
+
+                <button type="button" onclick="location.href='Others/P/index.html'" class="btn">
+                    <div class="upperButton">
+                        <h2 class="productTitle" id="P">P</h2>
+                    </div>
+                    <div class="underButton">
+                        <img src="Others/P/icon.gif" alt="P" class="productIcon">
+                        <div class="descriptionArea">
+                            <p class="description">ランダムに色を変えながら動く点です。</p>
+                        </div>
+                    </div>
+                </button>
+
             </section>
 
             <section id="info">
                 <h2 class="sectionTitle">更新情報</h2>
                 <div class="description">
+                    <li>2021/8/19</li>
+                    <ul>
+                        <li>新しいものが上に表示されるように変更</li>
+                        <li>ページ最上部に最新情報を記載</li>
+                        <li>ホームページ名を「作品展示場」から「トップページ」に変更</li>
+                        <li>各イラストのページを追加</li>
+                        <li>その他多少の変更</li>
+                    </ul>
+
                     <li>2021/8/18</li>
                     <ul>
                         <li>サイトのデザイン一新</li>
                         <li>Planet Simulator更新</li>
                         <li>転回帰更新</li>
+                        <li>その他多少の変更</li>
                     </ul>
+
                 </div>
             </section>
 
