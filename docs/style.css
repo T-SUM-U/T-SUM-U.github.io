@@ -233,6 +233,7 @@ audio {
 
 #sidebar-left {
     position: -webkit-sticky;
+    font-size: small;
     position: sticky;
     margin: 0;
     padding: 0;
@@ -245,6 +246,7 @@ audio {
 
 #sidebar-right {
     position: -webkit-sticky;
+    font-size: small;
     position: sticky;
     margin: 0 auto;
     padding: 0;
@@ -262,7 +264,8 @@ audio {
 
 .sideBtn {
     margin-top: 12%;
-    height: 60px;
+    max-width: 60px;
+    width: 50%;
 }
 
 #unity-canvas {
