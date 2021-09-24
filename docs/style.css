@@ -4,6 +4,16 @@
     src: url(TAユニバーサルライン_BDY_D.ttf);
 }
 
+@media screen and (max-width:1300px) {
+    .description {
+        width: 40%;
+        text-align: left;
+        line-height: 135%;
+        display: inline-block;
+        font-family: "customFont";
+    }
+}
+
 html {
     height: auto;
 }
@@ -208,11 +218,11 @@ audio {
     box-sizing: border-box;
 }
 
-.picBtn:hover{
+.picBtn:hover {
     background-color: #ebebeb;
 }
 
-#picSection{
+#picSection {
     height: auto;
     max-height: 100vh;
     display: inline-block;
@@ -225,7 +235,7 @@ audio {
     margin: auto;
 }
 
-.pagePic{
+.pagePic {
     max-width: 100%;
     max-height: 100vh;
     margin: auto;
