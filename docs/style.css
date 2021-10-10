@@ -4,9 +4,9 @@
     src: url(TAユニバーサルライン_BDY_D.ttf);
 }
 
-@media screen and (max-width:1300px) {
+@media screen and (max-width:1500px) {
     .description {
-        width: 40%;
+        width: 80%;
         text-align: left;
         line-height: 135%;
         display: inline-block;
@@ -97,7 +97,7 @@ main {
     margin: 0 auto;
     text-align: center;
     position: relative;
-    width: 70%;
+    width: 64%;
     height: 100%;
     border-right: solid 1px #bebebe;
     border-left: solid 1px #bebebe;
@@ -249,7 +249,7 @@ audio {
     padding: 0;
     top: 0;
     float: left;
-    width: 15%;
+    width: 18%;
     text-align: left;
     background-color: #ffffff;
 }
@@ -262,7 +262,7 @@ audio {
     padding: 0;
     top: 0;
     float: right;
-    width: 15%;
+    width: 18%;
     text-align: center;
     background-color: #ffffff;
 }
