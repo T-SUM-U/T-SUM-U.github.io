@@ -4,6 +4,16 @@
     src: url(TAユニバーサルライン_BDY_D.ttf);
 }
 
+@media screen and (max-width:1500px) {
+    .description {
+        width: 80%;
+        text-align: left;
+        line-height: 135%;
+        display: inline-block;
+        font-family: "customFont";
+    }
+}
+
 html {
     height: auto;
 }
@@ -87,7 +97,7 @@ main {
     margin: 0 auto;
     text-align: center;
     position: relative;
-    width: 70%;
+    width: 64%;
     height: 100%;
     border-right: solid 1px #bebebe;
     border-left: solid 1px #bebebe;
@@ -208,11 +218,11 @@ audio {
     box-sizing: border-box;
 }
 
-.picBtn:hover{
+.picBtn:hover {
     background-color: #ebebeb;
 }
 
-#picSection{
+#picSection {
     height: auto;
     max-height: 100vh;
     display: inline-block;
@@ -225,7 +235,7 @@ audio {
     margin: auto;
 }
 
-.pagePic{
+.pagePic {
     max-width: 100%;
     max-height: 100vh;
     margin: auto;
@@ -239,7 +249,7 @@ audio {
     padding: 0;
     top: 0;
     float: left;
-    width: 15%;
+    width: 18%;
     text-align: left;
     background-color: #ffffff;
 }
@@ -252,7 +262,7 @@ audio {
     padding: 0;
     top: 0;
     float: right;
-    width: 15%;
+    width: 18%;
     text-align: center;
     background-color: #ffffff;
 }
