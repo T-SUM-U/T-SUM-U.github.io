@@ -17,12 +17,25 @@
                 <img src="headerlogo2.png" alt="T_SUM_U" id="header-logo">
             </a>
         </div>
-    </header>
 
+    </header>
 
     <h1 id="mainTitle">トップページ</h1>
 
+    <div id="topShortcut">
+        <ul>
+            <li><a href="index.html#game">ゲーム</a></li>
+            <li><a href="index.html#se">効果音</a></li>
+            <li><a href="index.html#pic">イラスト</a></li>
+            <li><a href="index.html#model">3Dモデル</a></li>
+            <li><a href="index.html#other">その他</a></li>
+            <li><a href="index.html#info">更新情報</a></li>
+        </ul>
+    </div>
+
+
     <main>
+
         <div id="sidebar-left">
             <aside>
                 <h3 class="sideTitle">ショートカット</h3>
@@ -47,23 +60,26 @@
                     <img src="mail.png" alt="Mail" class="sideBtn">
                 </a>
 
+                <a href="https://www.pixiv.net/users/60035657">
+                    <img src="logo_icon_r.png" alt="pixiv" class="sideBtn">
+                </a>
+
                 <a class="twitter-timeline" data-height="640" data-theme="light"
                     href="https://twitter.com/T_SUM_U?ref_src=twsrc%5Etfw">Tweets by T_SUM_U</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </aside>
         </div>
 
+        
         <div id="content">
+
             <section id="news">
                 <h2 class="sectionTitle">最新情報</h2>
                 <div class="description">
-                    <li>2021/8/19</li>
+                    <li>2021/10/20</li>
                     <ul>
-                        <li>新しいものが上に表示されるように変更</li>
-                        <li>ページ最上部に最新情報を記載</li>
-                        <li>ホームページ名を「作品展示場」から「トップページ」に変更</li>
-                        <li>各イラストのページを追加</li>
-                        <li>その他多少の変更</li>
+                        <li>スマートフォン表示対応</li>
+                        <li>効果音2つ追加</li>
                     </ul>
                 </div>
             </section>
@@ -162,6 +178,7 @@
                 <h2 class="sectionTitle">効果音</h2>
                 <p>使用時にはクレジットに「T_SUM_U」と表記してください。</p>
                 <p>転載する際はURLを併記してください。</p>
+                <p>報告不要です。</p>
 
                 <div class="soundBox">
                     <h2 class="productTitle" id="incorrect">不正解</h2>
@@ -305,6 +322,35 @@
 
                 </div>
             </section>
+
+            <div id="menu">
+                <input type="checkbox" id="menuCheck">
+                <label for="menuCheck" id="menuBtn"><span></span></label>
+
+                <div id="menuContent">
+                    <div class="description">
+                        <div class="centeredMenu">
+                            <h3 class="sideTitle">外部リンク</h3>
+                            <br>
+                            <a href="mailto:tzsumhu@gmail.com">
+                                <img src="mail.png" alt="Mail" class="sideBtn">
+                            </a>
+
+                            <a href="https://www.pixiv.net/users/60035657">
+                                <img src="logo_icon_r.png" alt="pixiv" class="sideBtn">
+                            </a>
+
+                            <a class="twitter-timeline" data-height="640" data-theme="light"
+                                href="https://twitter.com/T_SUM_U?ref_src=twsrc%5Etfw">Tweets by T_SUM_U</a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#header-logo">
+                <img src="top.png" id="topBtn">
+            </a>
 
         </div>
     </main>

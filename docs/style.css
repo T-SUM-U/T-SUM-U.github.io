@@ -22,6 +22,13 @@ header {
     width: 15%;
 }
 
+#topBtn {
+    width: 40px;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+}
+
 .headerSideBox {
     max-height: 100%;
 }
@@ -103,7 +110,6 @@ section {
     border-bottom: solid 1px #bebebe;
     box-sizing: border-box;
     padding: 0px 12px 12px 12px;
-    /*   margin-bottom: 24px;*/
     background-color: #ffffff;
     font-size: 100%;
 }
@@ -116,7 +122,7 @@ section {
 }
 
 .btn {
-    width: 60%;
+    width: 30%;
     height: fit-content;
     margin: 12px 0px;
     padding: 0%;
@@ -177,7 +183,7 @@ section {
 }
 
 .soundBox {
-    width: 60%;
+    width: 30%;
     height: auto;
     display: inline-block;
     box-sizing: border-box;
@@ -235,7 +241,7 @@ audio {
     position: -webkit-sticky;
     font-size: small;
     position: sticky;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     top: 0;
     float: left;
@@ -259,13 +265,13 @@ audio {
 
 .sideTitle {
     text-align: center;
-    margin-top: 8px;
+    margin: 8px 0;
 }
 
 .sideBtn {
-    margin-top: 12%;
     max-width: 60px;
-    width: 50%;
+    width: 30%;
+    margin: 4px;
 }
 
 #unity-canvas {
@@ -278,6 +284,18 @@ audio {
     line-height: 135%;
     display: inline-block;
     font-family: "customFont";
+}
+
+#topShortcut{
+    display: none;
+}
+
+#menu{
+    display: none;
+}
+
+.twitter-timeline {
+    display: inline-block;
 }
 
 #content #unityContent #processing-pattern {
@@ -296,12 +314,127 @@ footer {
     color: #ffffff;
 }
 
-@media screen and (max-width:1300.1px) {
+@media screen and (max-width:800.1px) {
+    #content {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-right: solid 1px #bebebe;
+        border-left: solid 1px #bebebe;
+    }
     .description {
         width: 80%;
-        text-align: left;
         line-height: 135%;
         display: inline-block;
         font-family: "customFont";
+    }
+
+    #topShortcut {
+        display: block;
+        width: 40%;
+        text-align: left;
+        line-height: 135%;
+        margin: 0 auto;
+    }
+
+    .btn {
+        width: 80%;
+        height: fit-content;
+        margin: 12px 0px;
+        padding: 0%;
+        border: double 4px #000000;
+        background-color: #ffffff
+    }
+    #sidebar-left {
+        display: none;
+    }
+    #sidebar-right {
+        display: none;
+    }
+    .soundBox {
+        width: 80%;
+        height: auto;
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 12px 0px;
+        padding: 0%;
+        border: double 4px #000000;
+        background-color: #ffffff
+    }
+
+    #menu{
+        display: block;
+    }
+
+    #menuBtn {
+        position: fixed;
+        top: 6vw;
+        right: 2%;
+        display: flex;
+        height: 40px;
+        width: 40px;
+        background-color: #000000;
+        margin-top: 8px;
+        align-items: center;
+        justify-content: center;
+        z-index: 2147483647;
+    }
+    
+    #menuBtn span, #menuBtn span:before, #menuBtn span:after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        width: 20px;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+    }
+    
+    #menuBtn span:before {
+        bottom: 8px;
+    }
+    
+    #menuBtn span:after {
+        top: 8px;
+    }
+    
+    #menuCheck:checked~#menuBtn span {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    #menuCheck:checked~#menuBtn span:before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    
+    #menuCheck:checked~#menuBtn span:after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    
+    #menuCheck {
+        display: none;
+    }
+    
+    #menuContent {
+        display: none;
+        
+    }
+    
+    #menuCheck:checked~#menuContent {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        background-color: #c0c0c0;
+        display: flex;
+        top: 0px;
+        right: 0;
+        display: inline-block;
+    }
+    
+    .centeredMenu {
+        display: inline-block;
+       text-align: center;
     }
 }
