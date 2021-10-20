@@ -4,16 +4,6 @@
     src: url(TAユニバーサルライン_BDY_D.ttf);
 }
 
-@media screen and (max-width:1500px) {
-    .description {
-        width: 80%;
-        text-align: left;
-        line-height: 135%;
-        display: inline-block;
-        font-family: "customFont";
-    }
-}
-
 html {
     height: auto;
 }
@@ -304,4 +294,14 @@ footer {
     padding: 12px;
     font-size: 18px;
     color: #ffffff;
+}
+
+@media screen and (max-width:1300.1px) {
+    .description {
+        width: 80%;
+        text-align: left;
+        line-height: 135%;
+        display: inline-block;
+        font-family: "customFont";
+    }
 }
