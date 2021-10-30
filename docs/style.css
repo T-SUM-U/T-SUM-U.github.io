@@ -25,8 +25,8 @@ header {
 #topBtn {
     width: 40px;
     position: fixed;
-    bottom: 5vh;
-    right: 5vw;
+    bottom: 6vw;
+    right: 2vw;
 }
 
 .headerSideBox {
@@ -48,7 +48,7 @@ p, h1, h2, h3, h4, h5, h6, small, li, a {
     font-family: "customFont";
 }
 
-#game, #pic, #other {
+#news, #game, #pic, #other {
     background-color: #ebebeb;
 }
 
@@ -102,6 +102,10 @@ main {
 
 #mainTitle {
     margin: 48px;
+    text-align: center;
+}
+
+.subTitle{
     text-align: center;
 }
 
@@ -234,7 +238,7 @@ audio {
 .pagePic {
     max-width: 100%;
     max-height: 100vh;
-    margin: auto;
+    margin: 8px auto;
 }
 
 #sidebar-left {
@@ -281,7 +285,7 @@ audio {
 .description {
     width: 40%;
     text-align: left;
-    line-height: 135%;
+    line-height: 150%;
     display: inline-block;
     font-family: "customFont";
 }
@@ -301,6 +305,11 @@ audio {
 #content #unityContent #processing-pattern {
     width: 50%;
     height: 50%;
+}
+
+.codeInsert{
+    display: block;
+    margin: 8px 0;
 }
 
 footer {
@@ -325,7 +334,7 @@ footer {
     }
     .description {
         width: 80%;
-        line-height: 135%;
+        line-height: 150%;
         display: inline-block;
         font-family: "customFont";
     }
@@ -334,7 +343,7 @@ footer {
         display: block;
         width: 40%;
         text-align: left;
-        line-height: 135%;
+        line-height: 150%;
         margin: 0 auto;
     }
 
@@ -370,7 +379,7 @@ footer {
     #menuBtn {
         position: fixed;
         top: 6vw;
-        right: 2%;
+        right: 2vw;
         display: flex;
         height: 40px;
         width: 40px;

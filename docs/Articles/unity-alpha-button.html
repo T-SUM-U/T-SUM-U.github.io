@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> T_SUM_U | つぶやき </title>
+    <link rel="shortcut icon" href="../icon.png">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="../index.html">
+                <img src="../headerlogo2.png" alt="T_SUM_U" id="header-logo">
+            </a>
+        </div>
+    </header>
+
+
+    <h1 id="mainTitle">UnityのUIのボタンで透明部分を無視する方法</h1>
+
+    <main>
+        <div id="sidebar-left">
+            <aside>
+                <h3 class="sideTitle">ショートカット</h3>
+                <ul class="sideList">
+                    <li><a href="../index.html#updateLog">更新履歴</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <div id="sidebar-right">
+            <aside>
+                <h3 class="sideTitle">外部リンク</h3>
+                <br>
+                <a href="mailto:tzsumhu@gmail.com">
+                    <img src="../mail.png" alt="Mail" class="sideBtn">
+                </a>
+
+                <a href="https://www.pixiv.net/users/60035657">
+                    <img src="../logo_icon_r.png" alt="pixiv" class="sideBtn">
+                </a>
+
+                <a class="twitter-timeline" data-height="640" data-theme="light"
+                    href="https://twitter.com/T_SUM_U?ref_src=twsrc%5Etfw">Tweets by T_SUM_U</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </aside>
+        </div>
+
+
+
+        <div id="content">
+            <section id="text">
+                <div class="description">
+                    <br>
+                    <p>UnityのUIでボタンを使うとき、ボタン用の画像を用意して使うことが多いと思います。そんな時、「ボタン画像の透明部分も反応してしまうのは何とかしたい」と思ったこともあるでしょう。</p>
+                    <img src="unity-alpha-button/0.gif" class="pagePic">
+                    <p>こんな時に透明部分を反応させなくする方法を書き残しておきます。使用したUnityのバージョンは2021.1.12f1です。</p>
+                    <br>
+                    <p>まずはボタン用画像のInspectorでTexture TypeをSprite (2D and UI)に、Mesh TypeをFull Rectにし、Read/Write
+                        Enabledにチェックを入れてApplyします。</p>
+                    <img src="unity-alpha-button/1.png" class="pagePic">
+                    <p>そしてボタンにアタッチされているスクリプトのvoid Start()に次のコードを書き加えます（void Awake()とかでもいい）。</p>
+                    <code class="codeInsert">GetComponent&lt;Image&gt;().alphaHitTestMinimumThreshold = 1f;</code>
+                    <p>これで透明部分を無視するボタンができます。</p>
+                    <br>
+                    <p>既にボタン関連の処理があるスクリプトがあるならそこに書き加えれば大丈夫です。要はボタンのImageコンポーネントにアクセス出来ればいいのでボタンにアタッチする用のスクリプトを新たに作成する必要はありません。
+                    </p>
+                    <p>また、指定する数字を0から1の間にすれば、ボタンがギリギリ反応する透明度を指定できます。ここでは1に設定しているので、透明度が1未満なら（完全に不透明でないと）反応しない、となるわけです。
+                    </p>
+                </div>
+            </section>
+            <section id="reference">
+                <h2 class="sectionTitle">参考文献</h2>
+                <div class="description">
+                    <ul>
+                        <li>Image.alphaHitTestMinimumThreshold, Unity Technologies, 2021/10/30</li>
+                        <ul>
+                            <li><a
+                                    href="https://docs.unity3d.com/ja/2018.4/ScriptReference/UI.Image-alphaHitTestMinimumThreshold.html">https://docs.unity3d.com/ja/2018.4/ScriptReference/UI.Image-alphaHitTestMinimumThreshold.html</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </section>
+            <section id="updateLog">
+                <h2 class="sectionTitle">更新履歴</h2>
+                <div class="description">
+                    <ul>
+                        <li>2021/10/30</li>
+                        <ul>
+                            <li>記事作成</li>
+                        </ul>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <small>(C)2021 T_SUM_U</small>
+    </footer>
+</body>
+
+</html>
