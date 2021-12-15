@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> T_SUM_U | Inseki </title>
+    <link rel="shortcut icon" href="../../icon.png">
+    <link rel="stylesheet" href="../../style.css">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@T_SUM_U" />
+    <meta property="og:url" content="https://t-sum-u.github.io" />
+    <meta property="og:title" content="N10" />
+    <meta property="og:description" content="T_SUM_Uのウェブサイト" />
+    <meta property="og:image" content="icon.png" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="../../index.html">
+                <img src="../../headerlogo2.png" alt="T_SUM_U" id="header-logo">
+            </a>
+        </div>
+    </header>
+
+
+    <h1 id="mainTitle">Inseki</h1>
+
+    <main>
+        <div id="sidebar-left">
+            <aside>
+                <h3 class="sideTitle">ショートカット</h3>
+                <ul class="sideList">
+                    <li><a href="index.html#about">概要</a></li>
+                    <li><a href="index.html#updateLog">更新履歴</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <div id="sidebar-right">
+            <aside>
+                <h3 class="sideTitle">外部リンク</h3>
+                <br>
+                <a href="mailto:tzsumhu@gmail.com">
+                    <img src="../../mail.png" alt="Mail" class="sideBtn">
+                </a>
+
+                <a href="https://www.pixiv.net/users/60035657">
+                    <img src="../../logo_icon_r.png" alt="pixiv" class="sideBtn">
+                </a>
+
+                <a class="twitter-timeline" data-height="640" data-theme="light"
+                    href="https://twitter.com/T_SUM_U?ref_src=twsrc%5Etfw">Tweets by T_SUM_U</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </aside>
+        </div>
+
+
+
+        <div id="content">
+            <section style="text-align: center" id="unityContent">
+                <canvas id="unity-canvas" width=512 height=512
+                    style="width: 50%; height: 50%; background: #231F20"></canvas>
+                <script src="Build/temp.loader.js"></script>
+                <script>
+                    createUnityInstance(document.querySelector("#unity-canvas"), {
+                        dataUrl: "Build/temp.data.unityweb",
+                        frameworkUrl: "Build/temp.framework.js.unityweb",
+                        codeUrl: "Build/temp.wasm.unityweb",
+                        streamingAssetsUrl: "StreamingAssets",
+                        companyName: "T_SUM_U",
+                        productName: "Inseki",
+                        productVersion: "3.0",
+                        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+                        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+                    });
+                </script>
+            </section>
+            <section id="about">
+                <h2 class="sectionTitle">概要</h2>
+                <div class="description">
+                    <p>あああ</p>
+                </div>
+            </section>
+
+            <section id="updateLog">
+                <h2 class="sectionTitle">更新履歴</h2>
+                <div class="description">
+                    <p>あああ</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <small>(C)2021 T_SUM_U</small>
+    </footer>
+</body>
+
+</html>
