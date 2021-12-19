@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> T_SUM_U | 引斥の開発経緯 </title>
+    <link rel="shortcut icon" href="../icon.png">
+    <link rel="stylesheet" href="../style.css">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@T_SUM_U" />
+    <meta property="og:url" content="https://t-sum-u.github.io" />
+    <meta property="og:title" content="引斥の開発経緯" />
+    <meta property="og:description" content="T_SUM_Uのウェブサイト" />
+    <meta property="og:image" content="../icon.png" />
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="../index.html">
+                <img src="../headerlogo2.png" alt="T_SUM_U" id="header-logo">
+            </a>
+        </div>
+    </header>
+
+
+    <h1 id="mainTitle">引斥の開発経緯</h1>
+
+    <main>
+        <div id="sidebar-left">
+            <aside>
+                <h3 class="sideTitle">ショートカット</h3>
+                <ul class="sideList">
+                    <li><a href="#reference">参考文献</a></li>
+                    <li><a href="#updateLog">更新履歴</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <div id="sidebar-right">
+            <aside>
+                <h3 class="sideTitle">外部リンク</h3>
+                <br>
+                <a href="mailto:tzsumhu@gmail.com">
+                    <img src="../mail.png" alt="Mail" class="sideBtn">
+                </a>
+
+                <a href="https://www.pixiv.net/users/60035657">
+                    <img src="../logo_icon_r.png" alt="pixiv" class="sideBtn">
+                </a>
+
+                <a class="twitter-timeline" data-height="640" data-theme="light"
+                    href="https://twitter.com/T_SUM_U?ref_src=twsrc%5Etfw">Tweets by T_SUM_U</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </aside>
+        </div>
+
+
+
+        <div id="content">
+            <section id="text">
+                <div class="description">
+                    <br>
+                    <p>こんにちは。T_SUM_Uです。この記事を書いている時点（2021年12月19日）での私の最新作<a
+                            href="../games/Inseki/index.html">引斥</a>ですが、こちらまあまあの自信作となっております。なのでこちらの開発経緯を書いていこうと思います。
+                    </p>
+                    <br><br>
+                    <h2>発案</h2>
+                    <p>原案はいつ思い浮かんだのかはわかりません。しかしなんとなく「引力と斥力で誘導するゲームがあったら面白そう」という考えはありました。</p>
+                    <br><br>
+                    <h2>機会到来</h2>
+                    <p>案を実現する機会を伺っていたある日、<a
+                            href="https://twitter.com/naichilab/status/1425804782929801219?s=20">Unity1週間ゲームジャム（unity1week）開催の告知</a>がやってきました。今回こそ案を実現できないかと考えながらお題の発表を待ち、ついにお題が発表されました。<br>お題は「ちゅう」でした。実はこの1つ前のunity1week（お題「2」）、その前のお題「回」、そのさらに前のお題「あける」でも同じようなことを考えており、お題「あける」の時は<a
+                            href="../games/GravitalRoom/index.html">それっぽいもの</a>を作りましたが、まだしっくりと来ていませんでいた。そして今回の「ちゅう」でも難しいな～と思っていましたが、だからと言って「ねずみ」や「中」などといった安直なものは作りたくない。
+                    </p>
+                    <br><br>
+                    <h2>迷走</h2>
+                    <p>
+                        そうしていろいろと考えていたところ、当時の自分のトレンドであった正弦波とお題が悪魔合体し、<a
+                            href="https://twitter.com/T_SUM_U/status/1435115600708194304?s=20">ガチでわけのわからないもの</a>が出来上がりました。一応何をやっているか説明しますと、マウスカーソルがある場所に白点がひきつけられ、その距離に応じた高さの音が鳴るといったものになっています。お題関係ないやん。当時のT_SUM_U氏曰く、「ちゅうっていう言葉と正弦波の響きってなんか似てない？」とのことです。
+                    </p>
+                    <br><br>
+                    <h2>方向性の決定</h2>
+                    <p>流石にこれではいかんので、ゲームっぽくするために「マウスカーソルがあるところに引き寄せられる球を誘導する」といった方向にひとまず定めました（正弦波は健在）。しかしこれも面白くないので、今のように球が引力や斥力を及ぼすといった形態になりました（正弦波は健在）。
+                    </p>
+                    <br><br>
+                    <h2>正弦波との決別</h2>
+                    <p>方向性も決定し、内容も作り終えた。あとはビルドして公開するだけ！（正弦波は健在）といったところで、問題発生。なんとWebGLビルドでは正弦波が鳴らない。ここで泣く泣く正弦波とお別れをすることになります。当時のT_SUM_U氏曰く、「すごい悲しい、お題「ちゅう」要素が消えた。」とのことです。大して問題ないだろ。
+                    </p>
+                    <br><br>
+                    <h2>難易度</h2>
+                    <p>ついにunity1week公開の時がやってきました。<a
+                            href="https://unityroom.com/games/inseki2">当時のバージョン</a>はそのまま残してあるので実際にやってみればわかりますが、コメントにもある通りかなり難しいです。でも楽しんでいただけたようで何より。当サイトに公開してある引斥を最後までプレイした方ならわかると思いますが、当時公開したのは今では後ろのほうのステージになっています。これを受けて、当サイトに乗せるときは複数のステージを追加しようと決意しました。
+                    </p>
+                    <br><br>
+                    <h2>サイトで公開</h2>
+                    <p>unity1weekで公開してから3か月、ステージ選択を実装したVer2.0を公開しました。これでやっとひと段落つけます。</p>
+                    <br><br>
+                    <h2>オチがない</h2>
+                    <p>オチがつかなくなったのでここで筆をおきます。</p>
+                </div>
+            </section>
+            <section id="updateLog">
+                <h2 class="sectionTitle">更新履歴</h2>
+                <div class="description">
+                    <ul>
+                        <li>2021/12/19</li>
+                        <ul>
+                            <li>記事作成</li>
+                        </ul>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <small>(C)2021 T_SUM_U</small>
+    </footer>
+</body>
+
+</html>
