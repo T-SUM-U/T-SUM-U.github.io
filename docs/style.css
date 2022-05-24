@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face {
     font-family: "customFont";
-    src: url(TAユニバーサルライン_BDY_D.ttf);
+    src: url(GenShinGothic-Regular.ttf);
 }
 
 html {
@@ -42,14 +42,26 @@ header {
     float: left;
 }
 
-p, h1, h2, h3, h4, h5, h6, small, li, a {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+li,
+a {
     margin: 0;
     padding: 0;
     font-family: "customFont";
     line-height: 150%;
 }
 
-#news, #game, #pic, #other {
+#news,
+#game,
+#pic,
+#other {
     background-color: #ebebeb;
 }
 
@@ -106,7 +118,7 @@ main {
     text-align: center;
 }
 
-.subTitle{
+.subTitle {
     text-align: center;
 }
 
@@ -291,11 +303,11 @@ audio {
     font-family: "customFont";
 }
 
-#topShortcut{
+#topShortcut {
     display: none;
 }
 
-#menu{
+#menu {
     display: none;
 }
 
@@ -308,7 +320,7 @@ audio {
     height: 50%;
 }
 
-.codeInsert{
+.codeInsert {
     display: block;
     margin: 8px 0;
 }
@@ -340,7 +352,6 @@ footer {
         font-family: "customFont";
         word-break: break-all;
     }
-
     #topShortcut {
         display: block;
         width: 40%;
@@ -348,7 +359,6 @@ footer {
         line-height: 150%;
         margin: 0 auto;
     }
-
     .btn {
         width: 80%;
         height: fit-content;
@@ -373,11 +383,9 @@ footer {
         border: double 4px #000000;
         background-color: #ffffff
     }
-
-    #menu{
+    #menu {
         display: block;
     }
-
     #menuBtn {
         position: fixed;
         top: 6vw;
@@ -391,8 +399,9 @@ footer {
         justify-content: center;
         z-index: 2147483647;
     }
-    
-    #menuBtn span, #menuBtn span:before, #menuBtn span:after {
+    #menuBtn span,
+    #menuBtn span:before,
+    #menuBtn span:after {
         content: "";
         display: block;
         box-sizing: border-box;
@@ -401,38 +410,29 @@ footer {
         background-color: #ffffff;
         position: absolute;
     }
-    
     #menuBtn span:before {
         bottom: 8px;
     }
-    
     #menuBtn span:after {
         top: 8px;
     }
-    
     #menuCheck:checked~#menuBtn span {
         background-color: rgba(0, 0, 0, 0);
     }
-    
     #menuCheck:checked~#menuBtn span:before {
         bottom: 0;
         transform: rotate(45deg);
     }
-    
     #menuCheck:checked~#menuBtn span:after {
         top: 0;
         transform: rotate(-45deg);
     }
-    
     #menuCheck {
         display: none;
     }
-    
     #menuContent {
         display: none;
-        
     }
-    
     #menuCheck:checked~#menuContent {
         position: fixed;
         width: 100%;
@@ -443,9 +443,8 @@ footer {
         right: 0;
         display: inline-block;
     }
-    
     .centeredMenu {
         display: inline-block;
-       text-align: center;
+        text-align: center;
     }
 }
