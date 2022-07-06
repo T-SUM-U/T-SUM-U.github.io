@@ -540,4 +540,7 @@ footer {
         display: inline-block;
         text-align: center;
     }
+    .tabItem {
+        font-size: 80%;
+    }
 }
