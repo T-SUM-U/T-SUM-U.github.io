@@ -298,7 +298,8 @@ audio {
     display: inline-block;
 }
 
-.picBtn {
+.picBtn,
+.picContainer {
     margin: 6px;
     padding: 0%;
     background-color: #ffffff;
@@ -307,6 +308,7 @@ audio {
     height: auto;
     display: inline-block;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .picBtn:hover {
@@ -412,6 +414,11 @@ audio {
 .codeInsert {
     display: block;
     margin: 8px 0;
+}
+
+.fractalDescription {
+    font-size: small;
+    /* display: none;*/
 }
 
 footer {
