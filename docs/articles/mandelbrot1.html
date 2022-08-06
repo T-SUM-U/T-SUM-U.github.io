@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> T_SUM_U | マンデルブロ集合自動探索日記1 </title>
+    <link rel="shortcut icon" href="../icon.png">
+    <link rel="stylesheet" href="../style.css">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@T_SUM_U" />
+    <meta property="og:url" content="https://t-sum-u.github.io" />
+    <meta property="og:title" content="引斥の開発経緯" />
+    <meta property="og:description" content="T_SUM_Uのウェブサイト" />
+    <meta property="og:image" content="../icon.png" />
+
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_SVG"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="../index.html">
+                <img src="../headerlogo2.png" alt="T_SUM_U" id="header-logo">
+            </a>
+        </div>
+    </header>
+
+
+    <h1 id="mainTitle">マンデルブロ集合自動探索日記1</h1>
+
+    <main>
+        <div id="sidebar-left">
+            <aside>
+                <h3 class="sideTitle">ショートカット</h3>
+                <ul class="sideList">
+                    <li><a href="#reference">参考文献</a></li>
+                    <li><a href="#updateLog">更新履歴</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <div id="sidebar-right">
+            <aside>
+                <h3 class="sideTitle">外部リンク</h3>
+                <br>
+                <a href="mailto:tzsumhu@gmail.com">
+                    <img src="../mail.png" alt="Mail" class="sideBtn">
+                </a>
+
+                <a href="https://www.pixiv.net/users/60035657">
+                    <img src="../logo_icon_r.png" alt="pixiv" class="sideBtn">
+                </a>
+
+                <a class="twitter-timeline" data-height="640" data-theme="light"
+                    href="https://twitter.com/T_SUM_U?ref_src=twsrc%5Etfw">Tweets by T_SUM_U</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </aside>
+        </div>
+
+
+
+        <div id="content">
+            <section id="text">
+                <div class="description">
+                    <br>
+                    <p>こんにちは。T_SUM_Uです。この記事を書いている時点（2022年7月28日）では<a
+                            href="../mandelbrot/index.html">マンデルブロ集合画像館</a>にはNo.50までが公開されています。実はこの時点で既に94枚の未公開の画像がありますが、それはひとまず置いといて、これらの画像について思うことや気づいたことがあるので、まとめていきます。
+                    </p>
+                    <br><br>
+                    <h2>適切な計算回数</h2>
+                    <p>まずこちらの画像をご覧ください。</p>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="../mandelbrot/5083008.2970722215x-1.9410141221979635y-0.0011018844602188023mode2base9.png"
+                                alt="" class="innerPic">
+                        </div>
+                    </div>
+                    <br>
+                    <p><a
+                            href="../mandelbrot/index.html">マンデルブロ集合画像館</a>でNo.35として公開されている画像です。画像の中央左側にマンデルブロ集合としてよく知られた図形がありますね。しかし、形状が滑らかです。よく見るマンデルブロ集合は次の左のような図形であるのに対して、ここでは右のようになっています。
+                    </p>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="mandelbrot1/0.png" alt="" class="innerPic">
+                        </div>
+                    </div>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="mandelbrot1/1.png" alt="" class="innerPic">
+                        </div>
+                    </div>
+                    <br>
+                    <p>これは最大計算回数が小さいと発生します。（ここから数学の話になります。苦手な方やもう知っているという方は<a
+                            href="#SearchCalculation">ここをクリック</a>）して飛ばしてください。</p>
+                    <br>
+                    <p>そもそもマンデルブロ集合とは次の漸化式で表される複素数列において<math>
+                            <mn>n→∞</mn>
+                        </math>で<math>
+                            <msub>
+                                <mn>z</mn>
+                                <mn>n</mn>
+                            </msub>
+                        </math>が無限に発散しないような複素数<math>
+                            <mn>c</mn>
+                        </math>の集合です。</p>
+                    <math>
+                        <mo>{</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd>
+                                    <msub>
+                                        <mn>z</mn>
+                                        <mn>n+1</mn>
+                                    </msub>
+                                    <mo>=</mo>
+                                    <msub>
+                                        <mn>z</mn>
+                                        <mn>n</mn>
+                                        <mn>2</mn>
+                                    </msub>
+                                    <mn>+ c</mn>
+                                </mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd>
+                                    <msub>
+                                        <mn>z</mn>
+                                        <mn>0</mn>
+                                    </msub>
+                                    <mo>=</mo>
+                                    <mn>0</mn>
+                                </mtd>
+                            </mtr>
+                        </mtable>
+                    </math>
+                    <br>
+                    <p>しかし現実には無限回の計算は不可能なので、一定回数の計算で一定の大きさを超えたときに無限に発散したとみなします。ここでこの最大計算回数を大きい値に設定すればより正確な図形が生成されます。先ほどの左側の画像は最大計算回数を100回にして生成したものであり、対して右のは8回にして生成したものです。また、無限に発散したとみなす閾値は8に設定しています。
+                    </p>
+                    <br>
+                    <h2 id="SearchCalculation">適切な計算回数を探す</h2>
+                    <p>つまり何度も同じ計算を繰り返し、その計算の回数が大きいほど正確な画像が生成されるということです。しかし、計算回数が大きすぎると一枚の画像を生成するのに長い時間がかかってしまい、効率的ではありません。冒頭の画像はおよそ500万倍に拡大した画像ですが、最大計算回数は276回です。これより、拡大の倍率によって適切な最大計算回数が変化することがわかります。そこで、ここでは最大計算回数と倍率を変化させながら画像を何度か生成し、適切な最大計算回数を求めることとします。
+                    </p>
+                    <br>
+                    <h2>本題</h2>
+                    <p>これまでの話をまとめます。</p>
+                    <ul>
+                        <li>最大計算回数を適切に設定する必要がある。</li>
+                        <li>適切な最大計算回数は倍率によって異なる。</li>
+                        <li>発散したとみなす閾値による画像の出来については未検証。</li>
+                        <li>とりあえず適切な最大計算回数を求めるためにいくつかの画像を生成してみる。</li>
+                    </ul>
+                    <p>ここで色付けの方式を統一していくつかの画像を生成します。生成する場所と倍率は<a
+                            href="../mandelbrot/index.html">マンデルブロ集合画像館</a>から選定します。結果として次の場所が選ばれました（書かれている座標は画像の中心の座標ではありません）。</p>
+                </div>
+                <div class="descriptionArea">
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="../mandelbrot/4859888.230866634x-1.9410141424260867y-0.0011018915825234063mode2base229.png"
+                                alt="" class="innerPic">
+                        </div>
+                        <p class="fractalDescription">
+                            No.143<br>x:-1.9410141424260867<br>y:-0.0011018915825234063<br>4859888.230866634倍<br>MG法
+                            青229 276回</p>
+                    </div>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="../mandelbrot/1.745247976027693E8x-1.9410216660267685y-0.0010990483475825854mode0base131.png"
+                                alt="" class="innerPic">
+                        </div>
+                        <p class="fractalDescription">
+                            No.132<br>x:-1.9410216660267685<br>y:-0.0010990483475825854<br>1.745247976027693E8倍<br>MG法
+                            赤131 281回</p>
+                    </div>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="../mandelbrot/698279.1259519147x-1.8236075267630965y8.599640334137871E-8mode1base14.png"
+                                alt="" class="innerPic">
+                        </div>
+                        <p class="fractalDescription">
+                            No.128<br>x:-1.8236075267630965<br>y:8.599640334137871E-8<br>698279.1259519147倍<br>MG法 緑14
+                            273回</p>
+                    </div>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="../mandelbrot/44946.53603060061x-1.286511906859614y-0.43395413764324897mode0base96.png"
+                                alt="" class="innerPic">
+                        </div>
+                        <p class="fractalDescription">
+                            No.107<br>x:-1.286511906859614<br>y:-0.43395413764324897<br>44946.53603060061倍<br>MG法 赤96
+                            270回</p>
+                    </div>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="../mandelbrot/6174433.915266096x-1.2934089355760046y-0.43994224896139mode1base145.png"
+                                alt="" class="innerPic">
+                        </div>
+                        <p class="fractalDescription">
+                            No.87<br>x:-1.2934089355760046<br>y:-0.43994224896139<br>6174433.915266096倍<br>MG法 緑145 276回
+                        </p>
+                    </div>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="../mandelbrot/2.26199815946274E8x-1.9293217044711177y-2.8088051157878914E-10mode2base51.png"
+                                alt="" class="innerPic">
+                        </div>
+                        <p class="fractalDescription">
+                            No.53<br>x:-1.9293217044711177<br>y:-2.8088051157878914E-10<br>2.26199815946274E8倍<br>MG法
+                            青51 281回</p>
+                    </div>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="../mandelbrot/7537.83897505672x-1.4233661115954521y-0.15647410737198203mode0base119.png"
+                                alt="" class="innerPic">
+                        </div>
+                        <p class="fractalDescription">
+                            No.43<br>x:-1.4233661115954521<br>y:-0.15647410737198203<br>7537.83897505672倍<br>MG法
+                            赤119
+                            267回</p>
+                    </div>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="../mandelbrot/5083008.2970722215x-1.9410141221979635y-0.0011018844602188023mode2base9.png"
+                                alt="" class="innerPic">
+                        </div>
+                        <p class="fractalDescription">
+                            No.35<br>x:-1.9410141221979635<br>y:-0.0011018844602188023<br>5083008.2970722215倍<br>MG法
+                            青9
+                            276回</p>
+                    </div>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="../mandelbrot/61233.901041733916x-1.4249726984472106y-0.1587634486258328mode0base223.png"
+                                alt="" class="innerPic">
+                        </div>
+                        <p class="fractalDescription">
+                            No.33<br>x:-1.4249726984472106<br>y:-0.1587634486258328<br>61233.901041733916倍<br>MG法
+                            赤223
+                            270回</p>
+                    </div>
+                    <div class="picContainer">
+                        <div class="picBox">
+                            <img src="../mandelbrot/12725.742282245601x-1.2864495036153856y-0.43401380715463594mode0base250.png"
+                                alt="" class="innerPic">
+                        </div>
+                        <p class="fractalDescription">
+                            No.2<br>x:-1.2864495036153856<br>y:-0.43401380715463594<br>12725.742282245601倍<br>MG法
+                            赤250
+                            268回</p>
+                    </div>
+                </div>
+                <div class = "description">
+                    <p>色付けにはRGBを用いているので、最大計算回数は256の倍数であることが望ましいと考えられます。なので、ここでは選んだ各場所で最大計算回数を512, 1024, 2048,
+                        4096に設定して画像を生成します。</p>
+                </div>
+            </section>
+            <section id="updateLog">
+                <h2 class="sectionTitle">更新履歴</h2>
+                <div class="description">
+                    <ul>
+                        <li>2021/12/19</li>
+                        <ul>
+                            <li>記事作成</li>
+                        </ul>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <small>(C)2021 T_SUM_U</small>
+    </footer>
+</body>
+
+</html>
