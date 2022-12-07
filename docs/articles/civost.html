@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title> T_SUM_U | Civ6のOSTを入手する方法 </title>
+        <link rel="shortcut icon" href="../icon.png">
+        <link rel="stylesheet" href="../style.css">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@T_SUM_U" />
+        <meta property="og:url" content="https://t-sum-u.github.io" />
+        <meta property="og:title" content="Civ6のOSTを入手する方法" />
+        <meta property="og:description" content="T_SUM_Uのウェブサイト" />
+        <meta property="og:image" content="https://t-sum-u.github.io/articles/civost/thumbnail.jpg"
+            />
+
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <a href="../index.html">
+                    <img src="../headerlogo2.png" alt="T_SUM_U"
+                        id="header-logo">
+                </a>
+            </div>
+        </header>
+
+
+        <h1 id="mainTitle">Civ6のOSTを入手する方法</h1>
+
+        <main>
+            <div id="content">
+                <section id="text">
+                    <div class="description">
+                        <p>Sid Meier's Civilization
+                            Ⅵ（civ）を所持している人は、無料でオリジナルサウンドトラック（OST）を入手することができます。入手方がやや複雑なので、その方法を紹介します。各種DLCのOSTも入手できます。</p>
+                        <p>バニラ文明（アメリカ、アラビア、アステカ、ブラジル、中国、エジプト、イギリス、フランス、ドイツ、ギリシャ、インド、日本、コンゴ、ノルウェー、ローマ、ロシア、スキタイ、スペイン、シュメール）のOSTはSteamの場合は<br>C:\Program
+                            Files (x86)\Steam\steamapps\common\Sid Meier's
+                            Civilization VI\DLC\Sid Meier's Civilization VI OST<br>に格納されています。Epic
+                            Gamesの場合は該当するcivがインストールされたディレクトリの同様の場所を探してください。
+                        </p>
+                        <p>それ以外のDLCで追加される文明は入手方法が少し複雑になります。DLCが格納されたディレクトリ（C:\Program
+                            Files (x86)\Steam\steamapps\common\Sid Meier's
+                            Civilization
+                            VI\DLC）を見れば、各種DLCの名前が付いたフォルダがあることがわかります。それぞれのフォルダのPlatforms/Windows/audioに音声ファイルが置かれています（Windowsの場合）。例えばオーストラリアならAustralia\Platforms\Windows\audioといった具合です。文明の興亡はExpansion1、嵐の訪れはExpansion2に対応しています。そのディレクトリを見ると、wemファイルが沢山あることがわかります。これが音声ファイルです。音楽の他sにも様々な効果音が含まれています。</p>
+                        <img src="civost/0.png">
+                        <p>この中に太古、中世、産業、原子力各時代の文明のテーマ曲のファイルがあります。wemファイルはそのままでは聴けない環境が殆どだと思うので、変換する必要があります。その方法を以下に記載します。</p>
+                        <ol>
+                            <li>わかりやすいように、wemファイルを他のフォルダにコピーします。</li>
+                            <li><a
+                                    href="http://www.mediafire.com/file/en3m7mctkfedeju/soundMod.zip">こちら</a>からsoundModをダウンロードしてください。ダウンロードしたら解凍し、toolsフォルダの中のファイルを全てwemファイルが入ったフォルダに移します。</li>
+                            <li>convert2ogg.batを編集します。(*.stream)の部分を(*.wem)に書き換えます。又は、次をコピペして全て上書きします。<br><code
+                                    class="codeInsert">for %%f in (*.wem) do
+                                    ww2ogg.exe %%f --pcb
+                                    packed_codebooks_aoTuV_603.bin<br>
+                                    for %%f in (*.ogg) do revorb.exe %%f<br>
+                                    pause</code>
+                                編集を終えたら保存してください。</li>
+                            <li>convert2ogg.batを実行します。そうすると変換されたoggファイルが生成されます。</li>
+                            <li>生成されたoggファイルからOSTとなるテーマ曲を選びます。各文明各時代のテーマ曲とファイル名（番号）の対応表を載せておくので役立ててください。不明に関しては後述します。</li>
+                        </ol>
+                        <table border="1" width="100%">
+                            <tr>
+                                <th>文明</th><th>ディレクトリ</th><th>時代</th><th>ファイル番号</th>
+                            </tr>
+                            <td rowspan="5">オーストラリア</td>
+                            <td rowspan="5">Australia</td>
+                            <tr>
+                                <td>太古</td><td>496526209</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>38970911</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>856518652</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>634008422</td>
+                            </tr>
+
+                            <td rowspan="5">バビロン</td>
+                            <td rowspan="5">Babylon</td>
+                            <tr>
+                                <td>太古</td><td>832648278</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>192863332</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>928076583</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>794780084</td>
+                            </tr>
+
+                            <td rowspan="5">ビザンティン</td>
+                            <td rowspan="5">Byzantium_Gaul</td>
+                            <tr>
+                                <td>太古</td><td>不明</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>778483001</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>134896308</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>439968253</td>
+                            </tr>
+
+                            <td rowspan="5">ガリア</td>
+                            <td rowspan="5">Byzantium_Gaul</td>
+                            <tr>
+                                <td>太古</td><td>105440421</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>379679389</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>499867570</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>543110777</td>
+                            </tr>
+
+                            <td rowspan="5">エチオピア</td>
+                            <td rowspan="5">Ethiopia</td>
+                            <tr>
+                                <td>太古</td><td>99584679</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>427642042</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>462721722</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>929755125</td>
+                            </tr>
+
+                            <td rowspan="5">クリー</td>
+                            <td rowspan="5">Expansion1</td>
+                            <tr>
+                                <td>太古</td><td>945845810</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>888706335</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>6056103</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>147200677</td>
+                            </tr>
+
+                            <td rowspan="5">グルジア</td>
+                            <td rowspan="5">Expansion1</td>
+                            <tr>
+                                <td>太古</td><td>116264988</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>710128902</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>228987873</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>205635323</td>
+                            </tr>
+
+                            <td rowspan="5">韓国</td>
+                            <td rowspan="5">Expansion1</td>
+                            <tr>
+                                <td>太古</td><td>不明</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>642506276</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>1020383450</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>993945005</td>
+                            </tr>
+
+                            <td rowspan="5">マプチェ</td>
+                            <td rowspan="5">Expansion1</td>
+                            <tr>
+                                <td>太古</td><td>700477475</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>456861623</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>297884702</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>124285304</td>
+                            </tr>
+
+                            <td rowspan="5">モンゴル</td>
+                            <td rowspan="5">Expansion1</td>
+                            <tr>
+                                <td>太古</td><td>不明</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>370978430</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>164616794</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>831638947</td>
+                            </tr>
+
+                            <td rowspan="5">オランダ</td>
+                            <td rowspan="5">Expansion1</td>
+                            <tr>
+                                <td>太古</td><td>889940155</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>865132333</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>454122861</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>1014526728</td>
+                            </tr>
+
+                            <td rowspan="5">スコットランド</td>
+                            <td rowspan="5">Expansion1</td>
+                            <tr>
+                                <td>太古</td><td>不明</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>316277732</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>171915840</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>540643534</td>
+                            </tr>
+
+                            <td rowspan="5">ズールー</td>
+                            <td rowspan="5">Expansion1</td>
+                            <tr>
+                                <td>太古</td><td>1035976732</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>971977161</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>1001031483</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>277943692</td>
+                            </tr>
+
+                            <td rowspan="5">カナダ</td>
+                            <td rowspan="5">Expansion2</td>
+                            <tr>
+                                <td>太古</td><td>688045676</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>964185789</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>123594689</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>723405906</td>
+                            </tr>
+
+                            <td rowspan="5">ハンガリー</td>
+                            <td rowspan="5">Expansion2</td>
+                            <tr>
+                                <td>太古</td><td>437888856</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>734658578</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>555930267</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>97371496</td>
+                            </tr>
+
+                            <td rowspan="5">インカ</td>
+                            <td rowspan="5">Expansion2</td>
+                            <tr>
+                                <td>太古</td><td>306718860</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>150962331</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>32603251</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>660320982</td>
+                            </tr>
+
+                            <td rowspan="5">マリ</td>
+                            <td rowspan="5">Expansion2</td>
+                            <tr>
+                                <td>太古</td><td>不明</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>72750357</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>700887061</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>361137345</td>
+                            </tr>
+
+                            <td rowspan="5">マオリ</td>
+                            <td rowspan="5">Expansion2</td>
+                            <tr>
+                                <td>太古</td><td>1057868073</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>477666030</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>566637230</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>901306928</td>
+                            </tr>
+
+                            <td rowspan="5">オスマン</td>
+                            <td rowspan="5">Expansion2</td>
+                            <tr>
+                                <td>太古</td><td>1037672678</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>157875493</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>445971712</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>901911527</td>
+                            </tr>
+
+                            <td rowspan="5">フェニキア</td>
+                            <td rowspan="5">Expansion2</td>
+                            <tr>
+                                <td>太古</td><td>604444183</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>491735035</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>856645339</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>291559582</td>
+                            </tr>
+
+                            <td rowspan="5">スウェーデン</td>
+                            <td rowspan="5">Expansion2</td>
+                            <tr>
+                                <td>太古</td><td>653081382</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>212872031</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>580293855</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>735449955</td>
+                            </tr>
+
+                            <td rowspan="5">大コロンビア</td>
+                            <td rowspan="5">GranColombia_Maya</td>
+                            <tr>
+                                <td>太古</td><td>不明</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>676891837</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>950229318</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>1002428728</td>
+                            </tr>
+
+                            <td rowspan="5">マヤ</td>
+                            <td rowspan="5">GranColombia_Maya</td>
+                            <tr>
+                                <td>太古</td><td>352823754</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>891589677</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>166617173</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>944052403</td>
+                            </tr>
+
+                            <td rowspan="5">インドネシア</td>
+                            <td rowspan="5">Indonesia_Khmer</td>
+                            <tr>
+                                <td>太古</td><td>281581670</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>353522511</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>597918541</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>591616838</td>
+                            </tr>
+
+                            <td rowspan="5">クメール</td>
+                            <td rowspan="5">Indonesia_Khmer</td>
+                            <tr>
+                                <td>太古</td><td>797552315</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>998493457</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>393830268</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>154741117</td>
+                            </tr>
+
+                            <td rowspan="5">ベトナム</td>
+                            <td rowspan="5">KublaiKhan_Vietnam</td>
+                            <tr>
+                                <td>太古</td><td>不明</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>220988992</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>424188339</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>100912500</td>
+                            </tr>
+
+                            <td rowspan="5">マケドニア</td>
+                            <td rowspan="5">Macedonia_Persia</td>
+                            <tr>
+                                <td>太古</td><td>164656590</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>212345619</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>409727277</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>904998597</td>
+                            </tr>
+
+                            <td rowspan="5">ペルシア</td>
+                            <td rowspan="5">Macedonia_Persia</td>
+                            <tr>
+                                <td>太古</td><td>838994515</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>162046214</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>902358594</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>553986605</td>
+                            </tr>
+
+                            <td rowspan="5">ヌビア</td>
+                            <td rowspan="5">Nubia_Amanitore</td>
+                            <tr>
+                                <td>太古</td><td>43808695</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>569182330</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>443450443</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>1057143009</td>
+                            </tr>
+
+                            <td rowspan="5">ポーランド</td>
+                            <td rowspan="5">Poland_Jadwiga</td>
+                            <tr>
+                                <td>太古</td><td>不明</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>不明</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>不明</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>不明</td>
+                            </tr>
+
+                            <td rowspan="5">ポルトガル</td>
+                            <td rowspan="5">Portugal</td>
+                            <tr>
+                                <td>太古</td><td>429717480</td>
+                            </tr>
+                            <tr>
+                                <td>中世</td><td>333194308</td>
+                            </tr>
+                            <tr>
+                                <td>産業時代</td><td>68070020</td>
+                            </tr>
+                            <tr>
+                                <td>原子力時代</td><td>492677584</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <p>不明となっている部分は、変換したファイルに曲が見つからなかったためにファイルの特定ができなかった部分です。変換をしていると<code>Parse
+                                error: expected 0x42 fmt if vord missing</code>となって変換できないファイルがいくつかあります。特にポーランドに関してはすべてのファイルでこうなりました。調べてもこれといった解決方法が見つからなかったので、解決方法がわかる方は教えてください。</p>
+                        <br>
+                        <p>当ページに記載の事項を実行したことによって発生した損害について、筆者は一切の責任を負いません。また、これらのファイルをアップロードすることは著作権上の問題になる可能性があります。個人利用の範囲に留めましょう。</p>
+                        <br>
+                        <h2>蛇足</h2>
+                        <img src="civost/thumbnail.jpg" width="100%">
+                        <p align="center">↑しみじみと音楽を聴いている人</p>
+                    </div>
+                </section>
+                <section id="reference">
+                    <h2 class="sectionTitle">参考文献</h2>
+                    <div class="description">
+                        <li>Soundtrack (Civ6), Civilization Wiki, <a
+                                href="https://civilization.fandom.com/wiki/Soundtrack_(Civ6)">https://civilization.fandom.com/wiki/Soundtrack_(Civ6)</a>,
+                            2022年12月5日閲覧</li>
+                        <li>制作方法/音声/wem, bnkファイルの再生, World of Warships MOD制作
+                            Wiki, <a
+                                href="https://wikiwiki.jp/wowsmods/%E5%88%B6%E4%BD%9C%E6%96%B9%E6%B3%95/%E9%9F%B3%E5%A3%B0/wem%2C%20bnk%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E5%86%8D%E7%94%9F">https://wikiwiki.jp/wowsmods/%E5%88%B6%E4%BD%9C%E6%96%B9%E6%B3%95/%E9%9F%B3%E5%A3%B0/wem%2C%20bnk%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E5%86%8D%E7%94%9F</a>,
+                            2022年12月5日閲覧</li>
+                        <li>How to convert WEM files into playable audio OGG and MP3, Gaming House, <a
+                                href="https://www.gaminghouse.community/en/guides-tutorials-1003/how-to-play-convert-wem-files-ogg-mp3-67">https://www.gaminghouse.community/en/guides-tutorials-1003/how-to-play-convert-wem-files-ogg-mp3-67</a>,
+                            2022年12月6日閲覧</li>
+                    </div>
+                </section>
+                <section id="updateLog">
+                    <h2 class="sectionTitle">更新履歴</h2>
+                    <div class="description">
+                        <ul>
+                            <li>2022/12/7</li>
+                            <ul>
+                                <li>記事作成</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <small>(C)2021 T_SUM_U</small>
+        </footer>
+    </body>
+
+</html>
