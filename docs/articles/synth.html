@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> tsumu | OpenALとOpenGLでシンセサイザーを作ってみた </title>
+    <link rel="shortcut icon" href="../icon.png">
+    <link rel="stylesheet" href="../style.css">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tsumu" />
+    <meta property="og:url" content="https://tsumuzh.github.io" />
+    <meta property="og:title" content="OpenALとOpenGLでシンセサイザーを作ってみた" />
+    <meta property="og:description" content="tsumuのウェブサイト" />
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="../index.html">
+                <img src="../headerlogo2.png" alt="tsumu" id="header-logo">
+            </a>
+        </div>
+    </header>
+
+
+    <h1 id="mainTitle">OpenALとOpenGLでシンセサイザーを作ってみた</h1>
+
+    <main>
+        <div id="content">
+            <section id="text">
+                <div class="description">
+                    <br>
+                    シンセサイザーといってもそんな御大層な物ではありません。キーボードを正弦波が出る鍵盤にします。
+                    <br>
+                    <br>
+                    <h3>OpenAL</h3>
+                    <br>
+                    OpenGLは有名なので説明しません。OpenALはフリーのオーディオライブラリです。OpenGLとの相性がいいらしいです。いろんなゲームで使われています。unityでも使われているらしいです。最後に更新されたのは2010年7月20日です。検索するとOpenAIと間違われます。
+                    <img src="synth/0.png" width="100%">
+                    <p align="center">俺が検索したのはOpenALだ。OpenAIじゃない。ふざけるな！！</p>
+                    <br>
+                    <img src="synth/1.png" width="100%">
+                    <p align="center">アンインストールだのウイルスだのそんな悲しいこと言わないで。関連性が高いどころか関連性の全くないOpenAIは引っ込め。</p>
+                    <br>
+                    <br>
+                    <h3>実装</h3>
+                    <br>
+                    <p>1~9の数字キーを押すと対応する音が鳴るようにします。以下がソースコードです。</p>
+                    <pre>
+                        <code class="codeInsert">
+#define _USE_MATH_DEFINES
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;math.h&gt;
+#include &lt;al.h&gt;
+#include &lt;alc.h&gt;
+#include &lt;GL/glut.h&gt;
+
+ALCdevice *device;
+ALCcontext *context;
+ALshort waveData[48000];
+ALuint buffer;
+ALuint source;
+int SamplingFrequency;
+double baseFrequency = 440.0;
+double frequency;
+
+void GetKey(unsigned char key, int x, int y)
+{
+    frequency = baseFrequency * pow(2.0, ((key - 49.0) / 12.0));
+
+    alSourceStop(source);
+
+    alGenBuffers(1, &buffer);
+    alGenSources(1, &source);
+
+    for (int i = 0; i &lt; 48000; i++)
+    {
+        waveData[i] = 32767.0 * sin(2 * M_PI * frequency * i / SamplingFrequency);
+    }
+    alBufferData(buffer, AL_FORMAT_MONO16, waveData, sizeof(waveData), SamplingFrequency);
+    alSourcei(source, AL_BUFFER, buffer);
+    alSourcei(source, AL_LOOPING, AL_TRUE);
+    alSourcePlay(source);
+}
+
+void Display()
+{
+	glClear(GL_COLOR_BUFFER_BIT);
+}
+
+int main(int argc, char *argv[])
+{
+    device = alcOpenDevice(NULL);
+    context = alcCreateContext(device, NULL);
+    alcMakeContextCurrent(context);
+    alcGetIntegerv(device, ALC_FREQUENCY, 1, &SamplingFrequency);
+
+    glutInit(&argc,argv);
+	glutInitDisplayMode(GLUT_RGBA);
+    glutCreateWindow("synth");
+    glutDisplayFunc(Display);
+    glutKeyboardUpFunc(GetKey);
+    glutMainLoop();
+
+    return 0;
+}
+                        </code>
+                    </pre>
+                    1を押すとA4(440Hz)、2を押すとA#4、3を押すとB4というように、数字が大きくなると黒鍵を含めた鍵盤の順に音が高くなります。キーボードの9までです。それ以外のキーを押しても音は鳴りますが、音は鍵盤の順にはなりません。
+                    <br>
+                    <br>
+                    <h3>解説</h3>
+                    <br>
+                    <p>キーボードのいずれかのキーが押されると、関数GetKey()が実行されます。関数GetKey()内部では、押されたキーによって周波数を決定し、波形を生成し、再生します。キーボードの入力を受け取ると、プログラムは<a
+                            href="http://www3.nit.ac.jp/~tamura/ex2/ascii.html">ASCIIコード</a>で受け取ります。ASCIIコードの詳細に関してはリンク先を参照して欲しいのですが、要は文字に対して数を割り当てて管理しているのです。1~9の文字の場合、1から順に49~57が割り当てられています。そのため、キーボードで1が押されると、プログラムでは49の数値として受け取ります。それらを元として周波数を計算しています。
+                    </p>
+                    <br>
+                    <br>
+                    <h3>おわり</h3>
+                    <br>
+                    <p>このプログラムにおいてOpenGLは飾りです。やろうと思えばOpenALとOpenGLでDAWも作れそう。</p>
+                </div>
+            </section>
+            <section id="reference">
+                <h2 class="sectionTitle">参考文献</h2>
+                <div class="description">
+                    <ul>
+                        <li>ASCIIコード表, 田村仁研究室　日本工業大学創造システム工学科, 2023/11/26</li>
+                        <ul>
+                            <li><a
+                                    href="http://www3.nit.ac.jp/~tamura/ex2/ascii.html">http://www3.nit.ac.jp/~tamura/ex2/ascii.html</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </section>
+            <section id="updateLog">
+                <h2 class="sectionTitle">更新履歴</h2>
+                <div class="description">
+                    <ul>
+                        <li>2023/11/26</li>
+                        <ul>
+                            <li>記事作成</li>
+                        </ul>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <small>(C)2021~2023 tsumu</small>
+    </footer>
+</body>
+
+</html>

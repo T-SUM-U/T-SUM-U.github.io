@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title> tsumu | InteractiveMap </title>
+  <link rel="shortcut icon" href="../../icon.png">
+  <link rel="stylesheet" href="../../style.css">
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@tsumu" />
+  <meta property="og:url" content="https://tzsumhu.github.io" />
+  <meta property="og:title" content=Inseki />
+  <meta property="og:description" content="tsumuのウェブサイト" />
+  <meta property="og:image" content="https://tzsumhu.github.io/games/Inseki/icon.gif" />
+</head>
+
+<body>
+  <header>
+    <div>
+      <a href="../../index.html">
+        <img src="../../headerlogo2.png" alt="tsumu" id="header-logo">
+      </a>
+    </div>
+  </header>
+
+
+  <h1 id="mainTitle">InteractiveMap</h1>
+
+  <main>
+    <div id="sidebar-left">
+      <aside>
+        <h3 class="sideTitle">ショートカット</h3>
+        <ul class="sideList">
+          <li><a href="index.html#about">概要</a></li>
+          <li><a href="index.html#updateLog">更新履歴</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <div id="sidebar-right">
+      <aside>
+        <h3 class="sideTitle">外部リンク</h3>
+        <br>
+        <a href="mailto:tzsumhu@gmail.com">
+          <img src="../../mail.png" alt="Mail" class="sideBtn">
+        </a>
+
+        <a href="https://www.pixiv.net/users/60035657">
+          <img src="../../logo_icon_r.png" alt="pixiv" class="sideBtn">
+        </a>
+
+        <a class="twitter-timeline" data-height="640" data-theme="light"
+          href="https://twitter.com/tsumu?ref_src=twsrc%5Etfw">Tweets by
+          tsumu</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </aside>
+    </div>
+
+
+
+    <div id="content">
+      <section style="text-align: center" id="unityContent">
+        <canvas id="unity-canvas" width=960 height=600
+          style="width: 960px; height: 600px; background: #231F20"></canvas>
+        <script src="Build/interactivemap.loader.js"></script>
+        <script>
+          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            // Mobile device style: fill the whole browser client area with the game canvas:
+            var meta = document.createElement('meta');
+            meta.name = 'viewport';
+            meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+            document.getElementsByTagName('head')[0].appendChild(meta);
+
+            var canvas = document.querySelector("#unity-canvas");
+            canvas.style.width = "100%";
+            canvas.style.height = "100%";
+            canvas.style.position = "fixed";
+
+            document.body.style.textAlign = "left";
+          }
+
+          createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "Build/interactivemap.data",
+            frameworkUrl: "Build/interactivemap.framework.js",
+            codeUrl: "Build/interactivemap.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "tsumu",
+            productName: "InteractiveMap",
+            productVersion: "1.0",
+            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+          });
+        </script>
+      </section>
+      <section id="about">
+        <h2 class="sectionTitle">概要</h2>
+        <div class="description">
+          <p>地区をクリックすると白くハイライトされ、地名と首都名が表示されます。Plague Incみたいな地図を作りたくて作りました。
+            <br>ソースコードは<a href="https://github.com/tsumuzh/unity-interactivemap/tree/main">こちら</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="reference">
+        <h2 class="sectionTitle">参考文献</h2>
+        <div class="description">
+          <li>[Unity] Jsonに保存された情報を読み取る, VgjXbAnc, 2023/11/29
+            <br><a
+              href="https://zenn.dev/tech_memorandum/articles/25e1ec1e83e929">https://zenn.dev/tech_memorandum/articles/25e1ec1e83e929</a>
+          </li>
+
+
+        </div>
+      </section>
+
+      <section id="updateLog">
+        <h2 class="sectionTitle">更新履歴</h2>
+        <div class="description">
+          <li>2023/11/29:Ver1.0</li>
+          <ul>
+            <li>公開</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <small>(C)2021~2023 tsumu</small>
+  </footer>
+</body>
+
+</html>

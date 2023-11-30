@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 @font-face {
     font-family: "customFont";
     src: url(GenShinGothic-Regular.ttf);
@@ -416,10 +417,17 @@ audio {
     margin: 8px 0;
 }
 
+pre {
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
 .fractalDescription {
     font-size: small;
     /* display: none;*/
 }
+
 
 footer {
     /*   position: sticky;*/
@@ -445,6 +453,7 @@ footer {
         border-right: solid 1px #bebebe;
         border-left: solid 1px #bebebe;
     }
+
     .description {
         width: 80%;
         line-height: 150%;
@@ -452,6 +461,7 @@ footer {
         font-family: "customFont";
         word-break: break-all;
     }
+
     #topShortcut {
         display: block;
         width: 40%;
@@ -459,6 +469,7 @@ footer {
         line-height: 150%;
         margin: 0 auto;
     }
+
     .btn {
         width: 80%;
         height: fit-content;
@@ -467,12 +478,15 @@ footer {
         border: double 4px #000000;
         background-color: #ffffff
     }
+
     #sidebar-left {
         display: none;
     }
+
     #sidebar-right {
         display: none;
     }
+
     .soundBox {
         width: 80%;
         height: auto;
@@ -483,9 +497,11 @@ footer {
         border: double 4px #000000;
         background-color: #ffffff
     }
+
     #menu {
         display: block;
     }
+
     #menuBtn {
         position: fixed;
         top: 6vw;
@@ -499,6 +515,7 @@ footer {
         justify-content: center;
         z-index: 2147483647;
     }
+
     #menuBtn span,
     #menuBtn span:before,
     #menuBtn span:after {
@@ -510,29 +527,37 @@ footer {
         background-color: #ffffff;
         position: absolute;
     }
+
     #menuBtn span:before {
         bottom: 8px;
     }
+
     #menuBtn span:after {
         top: 8px;
     }
+
     #menuCheck:checked~#menuBtn span {
         background-color: rgba(0, 0, 0, 0);
     }
+
     #menuCheck:checked~#menuBtn span:before {
         bottom: 0;
         transform: rotate(45deg);
     }
+
     #menuCheck:checked~#menuBtn span:after {
         top: 0;
         transform: rotate(-45deg);
     }
+
     #menuCheck {
         display: none;
     }
+
     #menuContent {
         display: none;
     }
+
     #menuCheck:checked~#menuContent {
         position: fixed;
         width: 100%;
@@ -543,10 +568,12 @@ footer {
         right: 0;
         display: inline-block;
     }
+
     .centeredMenu {
         display: inline-block;
         text-align: center;
     }
+
     .tabItem {
         font-size: 80%;
     }
