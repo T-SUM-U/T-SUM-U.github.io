@@ -452,6 +452,7 @@ footer {
         height: 100%;
         border-right: solid 1px #bebebe;
         border-left: solid 1px #bebebe;
+        font-size: x-small;
     }
 
     .description {
