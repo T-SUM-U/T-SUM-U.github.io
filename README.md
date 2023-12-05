@@ -1,9 +1,8 @@
-### Hi there 👋
-
 表示フォントに「源真ゴシック」(http://jikasei.me/font/genshin/) を使用しています。
+
 Licensed under SIL Open Font License 1.1 (http://scripts.sil.org/OFL)
-© 2015 自家製フォント工房, © 2014, 2015 Adobe Systems Incorporated, © 2015 M+
-FONTS PROJECT
+
+© 2015 自家製フォント工房, © 2014, 2015 Adobe Systems Incorporated, © 2015 M+ FONTS PROJECT
 
 <!--
 **T-SUM-U/T-SUM-U** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
